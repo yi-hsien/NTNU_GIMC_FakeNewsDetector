@@ -60,11 +60,19 @@ print("<br>")
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
 predictions = probability_model.predict(input_content)
+
+print(prediction)
+
+
 print("prediction made")
 print("<br>")
 
 
+
+
 import numpy as np
+
+print("real news_percentage={}, fake news_percentage={}".format(prediction[0],prediction[1]))
 print(np.argmax(predictions))
 
 
