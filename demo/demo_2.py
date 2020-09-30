@@ -26,7 +26,7 @@ print("transformers imported")
 print("<br>")
 
 #tokenizer = BertTokenizer.from_pretrained("hfl/chinese-bert-wwm-ext")
-tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
+#tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
 
 print("bertmodel initialized")
 print("<br>")
@@ -47,11 +47,15 @@ content = tf.concat([cls,content], axis=-1)
 content_tensor = contents_list.to_tensor()
 '''
 
+'''
 input_title = encode_words(df[0])
 input_content = encode_words(df[1])
 
 print("done encoding")
 print("<br>")
+'''
+
+
 
 test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/200928-1_model.h5')
 #test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/test.h5')
@@ -60,7 +64,7 @@ print("<br>")
 
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
-predictions = probability_model.predict(input_content)
+predictions = probability_model.predict(content)
 print("prediction made")
 print("<br>")
 print(predictions)
