@@ -1,0 +1,47 @@
+##all test histories
+
+test1: bert_ext, lrn_rate = 0.00001, epochs = 200 , batch = 64,
+	emb64, bid64, den64, den2, ADAM
+
+test2: bert_ext, lrn_rate = 0.00001, epochs = 100 , batch = 64,
+	emb64, bid64, den64, den2, ADAM
+
+test3: bert_ext, lrn_rate = 0.00001, epochs = 10 , batch = 64,
+	emb64, bid64, den64, den2, ADAM ,  **** first time using binarycrossentropy
+
+
+200922-1: bert_ext, lrn_rate = 0.00001, epochs = 20, batch = 64,
+	emb64, bid64, den64, den1024, den2, ADAM ***back to sparsecategoricalcrossentropy
+
+200923-1: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den512, den2, ADAM
+
+200923-2: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den512, den2, ADAM
+
+200923-3: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den256, den2, ADAM
+
+200923-4: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den256, den2, ADAM
+
+200928-1: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den64, den64, den2, ADAM
+
+200928-2: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den128, den128, den128, den2, ADAM
+
+200928-3: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den256, den256, den256, den2, ADAM
+
+200928-4: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den1024, den1024, den1024, den2, ADAM
+
+200929-1: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den2048, den2, ADAM
+
+200929-2: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den4096, den2, ADAM
+
+200930-1: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den512, den2, ADAM
