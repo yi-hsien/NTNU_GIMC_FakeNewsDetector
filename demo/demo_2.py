@@ -47,13 +47,19 @@ content = tf.concat([cls,content], axis=-1)
 content_tensor = contents_list.to_tensor()
 '''
 
-'''
+
 input_title = encode_words(df[0])
 input_content = encode_words(df[1])
 
 print("done encoding")
 print("<br>")
-'''
+
+total_content = [input_content]
+print("content chose")
+print("<br>")
+
+
+
 
 
 
@@ -64,7 +70,7 @@ print("<br>")
 
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
-predictions = probability_model.predict(content)
+predictions = probability_model.predict(total_content)
 print("prediction made")
 print("<br>")
 print(predictions)
