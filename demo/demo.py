@@ -26,7 +26,7 @@ print("transformers imported")
 print("<br>")
 
 #tokenizer = BertTokenizer.from_pretrained("hfl/chinese-bert-wwm-ext")
-tokenizer = AutoTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
+tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
 
 print("bertmodel initialized")
 print("<br>")
