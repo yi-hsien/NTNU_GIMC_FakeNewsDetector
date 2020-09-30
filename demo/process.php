@@ -12,7 +12,7 @@ echo $output;
 */
 $param1 = $_POST['title'];
 $param2 = $_POST['content'];
-$path = "python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo.py ";
+$path = "python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo_2.py ";
 //passthru($path.$param1.' '.$param2);
 
 
