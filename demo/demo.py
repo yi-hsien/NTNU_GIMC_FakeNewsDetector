@@ -60,13 +60,9 @@ print("<br>")
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
 predictions = probability_model.predict(input_content)
-
-print(prediction)
-
-
 print("prediction made")
 print("<br>")
-
+print(prediction)
 
 
 
