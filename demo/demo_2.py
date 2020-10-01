@@ -11,6 +11,19 @@ print("<br>")
 print("ok, registered")
 print("<br>")
 
+for i in range(3):
+  print("<br>")
+
+print(len(content))
+
+for i in range(3):
+  print("<br>")
+
+
+
+
+
+
 #Eric Hsieh 2020.09.28
 #using huggingface_transformers https://github.com/huggingface/transformers
 #using chinese_bert_wwm https://github.com/ymcui/Chinese-BERT-wwm

@@ -14,21 +14,6 @@ $param1 = $_POST['title'];
 $param2 = $_POST['content'];
 
 
-function chineseToUnicode($str){
-    //split word
-    preg_match_all('/./u',$str,$matches);
-
-    $c = "";
-    foreach($matches[0] as $m){
-            $c .= "&#".base_convert(bin2hex(iconv('UTF-8',"UCS-4",$m)),16,10);
-    }
-    return $c;
-}
-
-echo chineseToUnicode($param1)
-echo chineseToUnicode($param2)
-
-
 
 
 
