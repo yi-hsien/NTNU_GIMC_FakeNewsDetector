@@ -12,6 +12,27 @@ echo $output;
 */
 $param1 = $_POST['title'];
 $param2 = $_POST['content'];
+
+
+function chineseToUnicode($str){
+    //split word
+    preg_match_all('/./u',$str,$matches);
+
+    $c = "";
+    foreach($matches[0] as $m){
+            $c .= "&#".base_convert(bin2hex(iconv('UTF-8',"UCS-4",$m)),16,10);
+    }
+    return $c;
+}
+
+echo chineseToUnicode($param1)
+echo chineseToUnicode($param2)
+
+
+
+
+
+
 $path = "python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo_2.py ";
 //passthru($path.$param1.' '.$param2);
 

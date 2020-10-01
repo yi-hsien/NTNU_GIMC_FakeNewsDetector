@@ -1,3 +1,4 @@
+#with encoding and decoding
 import sys
 demo = sys.argv[0]
 title = sys.argv[1]
@@ -53,6 +54,15 @@ input_content = encode_words(df[1])
 print("done encoding")
 print("<br>")
 
+total_content = [ input_content ]
+print("content chose")
+print("<br>")
+
+
+
+
+
+
 test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/200928-1_model.h5')
 #test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/test.h5')
 print("model loaded")
@@ -60,7 +70,7 @@ print("<br>")
 
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
-predictions = probability_model.predict(input_content)
+predictions = probability_model.predict(total_content)
 print("prediction made")
 print("<br>")
 print(predictions)
