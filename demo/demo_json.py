@@ -1,5 +1,3 @@
-
-
 import sys
 demo = sys.argv[0]
 title = sys.argv[1]
@@ -9,8 +7,27 @@ print(title)
 print("<br>")
 print(content)
 print("<br>")
-title = title.encode('utf8')
-content = title.encode('utf8')
+
+import json
+'''
+the task here..
+things sent in will look like \udc....
+
+which is a json encoding that needs to be decoded with json.loads()
+or other json decoding methods
+
+but for now we gotta use raw string literal to change the string into raw string first
+which the string object doesn't seem to do this
+
+1. keep on trying methods on the string object 
+2. creating a new file to put the input string, and import it thru file path
+
+
+'''
+raw_content = r'{}'.format(content)
+
+content = json.loads(raw_content)
+
 
 
 
