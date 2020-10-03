@@ -9,10 +9,6 @@ print(title)
 print("<br>")
 print(content)
 print("<br>")
-title = title.encode('utf8')
-content = title.encode('utf8')
-
-
 
 print("ok, registered")
 print("<br>")
