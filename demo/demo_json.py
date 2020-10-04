@@ -24,6 +24,18 @@ which the string object doesn't seem to do this
 
 
 '''
+title_string = open("title.txt").read()
+print title_string
+print repr(title_string)
+
+content_string = open("content.txt").read()
+print content_string
+print repr(content_string)
+
+
+
+sys.exit()
+
 raw_content = r'{}'.format(content)
 
 content = json.loads(raw_content)
