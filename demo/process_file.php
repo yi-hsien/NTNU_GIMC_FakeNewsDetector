@@ -12,7 +12,7 @@ $output = shell_exec($command.$_POST[title].' '.$_POST[content]);
 echo $output;
 */
 
-$json_title = json_encode($_POST['title']));
+$json_title = json_encode($_POST['title']);
 $json_content = json_encode($_POST['content']);
 
 //clear & write in file
