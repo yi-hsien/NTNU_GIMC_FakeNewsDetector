@@ -40,7 +40,7 @@ ini_set('display_errors', 1);
 exec($path.' 2>&1', $output);
 
 foreach ($output as $value)
-    echo $value
+    echo $value;
 
 
 ?>
