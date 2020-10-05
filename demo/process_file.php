@@ -16,6 +16,7 @@ $json_title = json_encode($_POST['title']);
 $json_content = json_encode($_POST['content']);
 
 //clear & write in file
+/*
 $file_handle_title = fopen('title.txt', 'w');
 fwrite($file_handle_title, $json_title);
 fclose($file_handle_title);
@@ -23,6 +24,11 @@ fclose($file_handle_title);
 $file_handle_content = fopen('content.txt', 'w');
 fwrite($file_handle_content, $json_content);
 fclose($file_handle_content);
+*/
+
+
+
+
 
 
 $path = "python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo_json.py ";
