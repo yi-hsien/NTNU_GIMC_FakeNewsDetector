@@ -17,7 +17,7 @@ header("Content-type:text/html; charset=utf-8");
 
 
 
-<form action="process_file.php" method="post">
+<form action="process.php" method="post">
 
   新聞標題 : <textarea name="title" rows="5" cols="40"><?php header("Content-type:text/html; charset=utf-8"); echo $title;?></textarea>
   <br><br>

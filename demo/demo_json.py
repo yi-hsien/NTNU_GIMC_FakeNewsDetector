@@ -24,13 +24,6 @@ which the string object doesn't seem to do this
 
 
 '''
-json_content = json.loads(content)
-print(json_content)
-
-
-
-
-
 
 
 print("ok, registered")
@@ -49,10 +42,6 @@ print(type(content))
 
 for i in range(3):
   print("<br>")
-
-
-
-
 
 
 #Eric Hsieh 2020.09.28
@@ -93,6 +82,7 @@ content_tensor = contents_list.to_tensor()
 
 input_title = encode_words(df[0])
 input_content = encode_words(df[1])
+
 
 print("done encoding")
 print("<br>")
