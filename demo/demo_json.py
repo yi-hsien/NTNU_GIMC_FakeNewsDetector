@@ -11,7 +11,7 @@ print("<br>")
 import json
 '''
 the task here..
-things sent in will look like \udc....
+things sent in will look like \\udc....
 
 which is a json encoding that needs to be decoded with json.loads()
 or other json decoding methods
@@ -24,6 +24,11 @@ which the string object doesn't seem to do this
 
 
 '''
+json_content = json.loads(content)
+print(json_content)
+
+
+
 
 
 
