@@ -3,7 +3,7 @@ demo = sys.argv[0]
 title = sys.argv[1]
 content = sys.argv[2]
 
-file = open(sys.argv[2], 'r')
+file = open(sys.argv, 'r')
 for line in file.readlines():
     print(line, end = '')
 file.close()
