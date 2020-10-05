@@ -1,11 +1,12 @@
 import sys
 demo = sys.argv[0]
 title = sys.argv[1]
-content = "'"+sys.argv[2]+"'"
+content = sys.argv[2]
 
 input_array = sys.argv[1:]
 
 import json
+'''
 for strings in input_array:
   strings = '"'+strings+'"'
   print("<br>originals")
@@ -13,14 +14,26 @@ for strings in input_array:
   print("<br>length: ")
   print(len(strings))
 
+  json_decoded_string = json.loads(strings)
   print("<br>jsondecoded")
-  print(json.loads(strings))
+  print(json_decoded_string)
   print("<br>length: ")
-  print(len(json.loads(strings)))
-#  print("<br>length: " + len(json_decoded_string))
+  print(len(json_decoded_string))
+  
+json testing passed!
+'''
 
+content = '"'+content+'"'
+print(content)
+print("<br>length: ")
+print(len(content))
+print(type(content))
 
-sys.exit()
+content = json.loads(content)
+print(content)
+print("<br>length: ")
+print(len(content))
+print(type(content))
 
 
 
