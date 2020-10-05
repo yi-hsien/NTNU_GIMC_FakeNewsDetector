@@ -2,6 +2,19 @@ import sys
 demo = sys.argv[0]
 title = sys.argv[1]
 content = sys.argv[2]
+
+
+for arg in sys.argv[content]:
+    print(eval('"' + arg.replace('"', '\\"') + '"'))
+
+
+
+
+sys.exit()
+
+
+
+
 print("<br>")
 print(title)
 print("<br>")
