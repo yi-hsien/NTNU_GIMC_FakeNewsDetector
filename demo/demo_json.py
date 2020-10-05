@@ -7,6 +7,11 @@ print(demo)
 print(title)
 print(content)
 
+text_file = open("/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/input.txt", "w")
+text_file.write(content)
+text_file.close()
+
+
 sys.exit()
 
 
