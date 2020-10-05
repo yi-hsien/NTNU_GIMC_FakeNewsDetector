@@ -12,8 +12,8 @@ $output = shell_exec($command.$_POST[title].' '.$_POST[content]);
 echo $output;
 */
 
-$json_title = json_encode($_POST['title']);
-$json_content = json_encode($_POST['content']);
+//$json_title = json_encode($_POST['title']);
+//$json_content = json_encode($_POST['content']);
 
 //clear & write in file
 /*
@@ -25,6 +25,11 @@ $file_handle_content = fopen('content.txt', 'w');
 fwrite($file_handle_content, $json_content);
 fclose($file_handle_content);
 */
+
+$jsonString = file_get_contents("php://input");
+$myFile = "testFile.txt";
+file_put_contents($myFile,$jsonString);
+echo '{ "success": true }';
 
 
 
