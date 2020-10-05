@@ -10,10 +10,13 @@ for strings in input_array:
   strings = '"'+strings+'"'
   print("<br>originals")
   print(strings)
-  print("<br>length: " + len(strings))
+  print("<br>length: ")
+  print(len(strings))
 
   print("<br>jsondecoded")
   print(json.loads(strings))
+  print("<br>length: ")
+  print(len(json.loads(strings)))
 #  print("<br>length: " + len(json_decoded_string))
 
 
