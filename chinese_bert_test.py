@@ -19,7 +19,7 @@ print("bertmodel initialized")
 print("<br>")
 
 
-CSV_PATH = ""
+CSV_PATH = "/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv"
 
 import pandas as pd
 def load_newsdata():
@@ -72,7 +72,10 @@ print("<br>")
 
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
-predictions = probability_model.predict(input_content_list)
+predictions = []
+for samples in input_content_list:
+  temp = probability_model.predict(samples)
+  predictions.append(temp)
 print("prediction made")
 print("<br>")
 print(predictions)
