@@ -3,13 +3,10 @@ demo = sys.argv[0]
 title = sys.argv[1]
 content = sys.argv[2]
 
-print(demo)
-print(title)
-print(content)
-
-text_file = open("/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/input.txt", "w")
-text_file.write(content)
-text_file.close()
+file = open(sys.argv[2], 'r')
+for line in file.readlines():
+    print(line, end = '')
+file.close()
 
 
 sys.exit()
