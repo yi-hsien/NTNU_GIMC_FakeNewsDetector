@@ -3,7 +3,8 @@ demo = sys.argv[0]
 title = sys.argv[1]
 content = sys.argv[2]
 
-content = content.encode('UTF-8')
+print(demo)
+print(title)
 print(content)
 
 sys.exit()
