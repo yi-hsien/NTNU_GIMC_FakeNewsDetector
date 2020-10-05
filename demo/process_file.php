@@ -28,7 +28,7 @@ fclose($file_handle_content);
 
 $jsonString = file_get_contents("php://input");
 $myFile = "testFile.txt";
-file_put_contents($myFile,$jsonString);
+file_put_contents("/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/".$myFile,$jsonString);
 echo '{ "success": true }';
 
 
