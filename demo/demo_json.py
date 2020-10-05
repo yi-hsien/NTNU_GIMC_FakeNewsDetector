@@ -3,7 +3,7 @@ demo = sys.argv[0]
 title = sys.argv[1]
 content = sys.argv[2]
 
-print(srgv)
+print(sys.argv)
 
 sys.exit()
 
