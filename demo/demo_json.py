@@ -3,10 +3,18 @@ demo = sys.argv[0]
 title = sys.argv[1]
 content = "'"+sys.argv[2]+"'"
 
-print(sys.argv[2])
-print(content)
+input_array = sys.argv[1:]
 
+import json
+for strings in input_array:
+  strings = '"'+strings+'"'
+  print("<br>originals")
+  print(strings)
+  print("<br>length: " + len(strings))
 
+  print("<br>jsondecoded")
+  print(json.loads(strings))
+#  print("<br>length: " + len(json_decoded_string))
 
 
 sys.exit()
@@ -21,7 +29,6 @@ print("<br>")
 print(content)
 print("<br>")
 
-import json
 '''
 the task here..
 things sent in will look like \\udc....
