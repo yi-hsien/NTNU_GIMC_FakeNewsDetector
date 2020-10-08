@@ -90,5 +90,5 @@ with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', n
 #check credibility
 
 true_label = df1[['labeled']]
-print(predictions.shape)
-print(true_label.shape)
+print(len(predictions))
+print(len(true_label))
