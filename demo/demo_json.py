@@ -1,85 +1,42 @@
 import sys
+#argv import
 demo = sys.argv[0]
 title = sys.argv[1]
 content = sys.argv[2]
-
 input_array = sys.argv[1:]
+print("<br> parameters imported")
 
-'''
-import json
-for strings in input_array:
-  strings = '"'+strings+'"'
-  print("<br>originals")
-  print(strings)
-  print("<br>length: ")
-  print(len(strings))
+###encoding transfer###
 
-  json_decoded_string = json.loads(strings)
-  print("<br>jsondecoded")
-  print(json_decoded_string)
-  print("<br>length: ")
-  print(len(json_decoded_string))
-  
-json testing passed!
-'''
+##title
+title = '\''+title+'\''
+print("<br>original length: ")
+print(len(title))
+print("<br>")
+title = title.encode('utf-8', errors='surrogateescape').decode('utf-8')
+print(title)
+print("<br>length: ")
+print(len(title))
 
+##content
 content = '\''+content+'\''
-#print(content)
 print("<br>original length: ")
 print(len(content))
 print("<br>")
-
 content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
-
-
 print(content)
 print("<br>length: ")
 print(len(content))
 
-sys.exit()
+print("<br>done encoding")
 
-
-
-print("<br>")
+print("<br> -- 內文如下 --")
 print(title)
 print("<br>")
 print(content)
-print("<br>")
 
-'''
-the task here..
-things sent in will look like \\udc....
-
-which is a json encoding that needs to be decoded with json.loads()
-or other json decoding methods
-
-but for now we gotta use raw string literal to change the string into raw string first
-which the string object doesn't seem to do this
-
-1. keep on trying methods on the string object 
-2. creating a new file to put the input string, and import it thru file path
-
-
-'''
-
-
-print("ok, registered")
-print("<br>")
-
-for i in range(3):
+for i in range(4):
   print("<br>")
-
-print("string length: ")
-print(len(content))
-print("<br>")
-print("string type: ")
-print(type(content))
-
-
-
-for i in range(3):
-  print("<br>")
-
 
 #Eric Hsieh 2020.09.28
 #using huggingface_transformers https://github.com/huggingface/transformers
