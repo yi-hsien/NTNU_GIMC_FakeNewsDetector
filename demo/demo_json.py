@@ -5,8 +5,8 @@ content = sys.argv[2]
 
 input_array = sys.argv[1:]
 
-import json
 '''
+import json
 for strings in input_array:
   strings = '"'+strings+'"'
   print("<br>originals")
@@ -29,13 +29,15 @@ print("<br>length: ")
 print(len(content))
 print(type(content))
 
-content = json.loads(content)
+content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
+
+
 print(content)
 print("<br>length: ")
 print(len(content))
 print(type(content))
 
-
+sys.exit
 
 
 
