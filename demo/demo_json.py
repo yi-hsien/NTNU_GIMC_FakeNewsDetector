@@ -23,7 +23,7 @@ for strings in input_array:
 json testing passed!
 '''
 
-content = '"'+content+'"'
+content = '''+content+'''
 print(content)
 print("<br>length: ")
 print(len(content))
