@@ -25,9 +25,9 @@ json testing passed!
 
 content = '\''+content+'\''
 #print(content)
-print("<br>length: ")
+print("<br>original length: ")
 print(len(content))
-print(type(content))
+print("<br>")
 
 content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
 
@@ -35,9 +35,8 @@ content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
 print(content)
 print("<br>length: ")
 print(len(content))
-print(type(content))
 
-sys.exit
+sys.exit()
 
 
 
