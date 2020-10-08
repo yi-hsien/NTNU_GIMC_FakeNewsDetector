@@ -10,7 +10,7 @@ test_u = '"\udce9\udca7\udc90"'
 
 
 print(test_string)
-print(test_u)
+#print(test_u)
 
 import json
 
