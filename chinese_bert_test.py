@@ -88,7 +88,7 @@ print("<br>")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V2_results.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/apple_realtime200V2_results.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 
