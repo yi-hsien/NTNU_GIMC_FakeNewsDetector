@@ -28,7 +28,7 @@ content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
 #print("<br>length: ")
 #print(len(content))
 
-print("<br>done encoding<br><br>")
+print("<br>done decoding<br><br>")
 
 print("<br> -- 內文如下 -- <br>")
 print("標題: ")
