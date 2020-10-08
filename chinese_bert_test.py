@@ -94,8 +94,8 @@ with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', n
 
 #check credibility
 accurate_count = 0
-for i in range(3):
+for i in range(range_due_to_dataset):
   if np.argmax(predictions[i][0]) == label_due_to_news_provider:
     accurate_count+=1
 
-print(accurate_count)
+print("credibility rate is {:.5f}%".format(accurate_count/range_due_to_dataset*100))
