@@ -92,3 +92,5 @@ with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', n
 true_label = df1[['labeled']]
 print(len(predictions))
 print(len(true_label))
+print(predictions[0][0])
+print(len[0])
