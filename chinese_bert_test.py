@@ -47,8 +47,8 @@ cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]
 content = tf.concat([cls,content], axis=-1)
 content_tensor = contents_list.to_tensor()
 '''
-input_title_list = [encode_words(titles) for titles in df1['title'].values]
-input_content_list = [encode_words(contents) for contents in df1['content'].values]
+input_title_list = [[encode_words(titles)] for titles in df1['title'].values]
+input_content_list = [[encode_words(contents)] for contents in df1['content'].values]
 
 
 
