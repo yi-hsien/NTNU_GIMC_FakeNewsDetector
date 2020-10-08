@@ -10,29 +10,31 @@ print("<br> parameters imported")
 
 ##title
 title = '\''+title+'\''
-print("<br>original length: ")
-print(len(title))
-print("<br>")
+#print("<br>original length: ")
+#print(len(title))
+#print("<br>")
 title = title.encode('utf-8', errors='surrogateescape').decode('utf-8')
-print(title)
-print("<br>length: ")
-print(len(title))
+#print(title)
+#print("<br>length: ")
+#print(len(title))
 
 ##content
 content = '\''+content+'\''
-print("<br>original length: ")
-print(len(content))
-print("<br>")
+#print("<br>original length: ")
+#print(len(content))
+#print("<br>")
 content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
-print(content)
-print("<br>length: ")
-print(len(content))
+#print(content)
+#print("<br>length: ")
+#print(len(content))
 
-print("<br>done encoding")
+print("<br>done encoding<br><br>")
 
-print("<br> -- 內文如下 --")
+print("<br> -- 內文如下 -- <br>")
+print("標題: ")
 print(title)
 print("<br>")
+print("內文: ")
 print(content)
 
 for i in range(4):
