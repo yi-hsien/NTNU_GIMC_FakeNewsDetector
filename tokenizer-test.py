@@ -20,7 +20,7 @@ print(test_u)
 '''
 
 test = '"\udce9\udca7\udc90"'
-print(test)
+
 
 import json
 
