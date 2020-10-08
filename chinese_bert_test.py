@@ -29,7 +29,7 @@ def load_newsdata():
     return(df)
 
 df = load_newsdata()
-df1 = df[['title', 'content', 'labeled']]
+df1 = df['title', 'content', 'labeled']
 
 
 
@@ -56,7 +56,7 @@ print("done encoding")
 print("<br>")
 
 
-#total_content = [ input_content_list ]
+total_content = [ input_content_list ]
 print("content chose")
 print("<br>")
 
@@ -72,10 +72,13 @@ print("<br>")
 
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
-predictions = []
-for samples in input_content_list:
-  temp = probability_model.predict(samples)
-  predictions.append(temp)
+#predictions = []
+#for samples in input_content_list:
+#  temp = probability_model.predict(samples)
+#  predictions.append(temp)
+predictions = probability_model.predict(total_content)
+
+
 print("prediction made")
 print("<br>")
 print(predictions)
