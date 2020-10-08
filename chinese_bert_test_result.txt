@@ -26,8 +26,8 @@ liberty200V2                96%
 mission200V1                90.5%
 mission200V2                78.5%
 nooho200V1                  91%
-nooho200V2                  
-qiqi200V1
+nooho200V2                  87%
+qiqi200V1                   
 qiqi200V2
 udn_realtime200V1
 udn_realtime200V2
