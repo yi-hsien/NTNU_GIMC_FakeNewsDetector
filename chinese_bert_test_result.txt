@@ -3,8 +3,8 @@
 provider                    credibility_rate
 apple_realtime200V1         81%
 apple_realtime200V2         75%
-central200V1--0             
-chinatimes200V1--0
+central200V1--0             81.5%
+chinatimes200V1--0          
 chinatimes200V2
 ettoday200V1--0
 ettoday200V2
