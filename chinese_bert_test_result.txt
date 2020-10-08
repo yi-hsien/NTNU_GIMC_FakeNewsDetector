@@ -20,8 +20,8 @@ ettoday200V2                85.5%
 globalmilitary200V1         92%
 globalmilitary200V2         96.5%
 kknews200V1                 85.5%
-kknews200V2                 
-liberty200V1
+kknews200V2                 86%
+liberty200V1                
 liberty200V2
 mission200V1
 mission200V2
