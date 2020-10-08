@@ -16,8 +16,8 @@ central200V1                81.5%
 chinatimes200V1             77.5%
 chinatimes200V2             79%
 ettoday200V1                85.5%
-ettoday200V2                
-globalmilitary200V1
+ettoday200V2                85.5%
+globalmilitary200V1         
 globalmilitary200V2
 kknews200V1
 kknews200V2
