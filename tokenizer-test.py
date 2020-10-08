@@ -19,9 +19,12 @@ test_u = json.loads(test_u)
 print(test_u)
 '''
 
-test = '"\udce9\udca7\udc90"'
+test = '\udce9\udca7\udc90'
 
+test.encode('utf-8', errors='surrogateescape')
 
-import json
+print(test)
 
-print(json.loads(test))
+#import json
+
+#print(json.loads(test))
