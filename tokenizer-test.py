@@ -14,5 +14,5 @@ print(test_string)
 
 import json
 
-test_u_load = json.loads(test_u)
-print(test_u_load)
+test_u = json.loads(test_u)
+print(test_u)
