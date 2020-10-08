@@ -2,6 +2,11 @@
 #using huggingface_transformers https://github.com/huggingface/transformers
 #using chinese_bert_wwm https://github.com/ymcui/Chinese-BERT-wwm
 
+#this file is used to find how accurate a model is to a specific news provider
+#remember to change this accordingly
+label_due_to_news_provider = 0
+range_due_to_dataset = 200
+
 import tensorflow as tf
 print("tensorflow imported")
 print("<br>")
@@ -86,11 +91,11 @@ import csv
 with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
-
+'''
 #check credibility
-
-true_label = df1[['labeled']]
-print(len(predictions))
-print(len(true_label))
-print(predictions[0][0])
-print(true_label)
+accurate_num = 0
+for i in range(range_due_to_dataset):
+  if predictions[0]
+'''
+print(predictions[0][1])
+print(predictions[1][0])
