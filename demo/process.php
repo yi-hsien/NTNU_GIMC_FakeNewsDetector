@@ -5,7 +5,7 @@
 echo "<span style='font-size:30px'>AI新聞可信度辨識結果<br></span>";
 echo "<br>";
 
-echo "loading python... </br>... </br>...";
+echo "loading python... </br>... </br>...</br>";
 /*
 $command = escapeshellcmd('python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo.py ');
 $output = shell_exec($command.$_POST[title].' '.$_POST[content]);
