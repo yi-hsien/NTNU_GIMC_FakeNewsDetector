@@ -21,7 +21,7 @@ print(test_u)
 
 test = '\udce9\udca7\udc90'
 
-test.encode('utf-8', errors='surrogateescape')
+test.encode('utf-8', errors='surrogateescape').decode('utf-8')
 
 print(test)
 
