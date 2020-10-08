@@ -63,7 +63,6 @@ print("<br>")
 
 
 test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/200928-1_model.h5')
-#test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/test.h5')
 print("model loaded")
 print("<br>")
 
@@ -73,17 +72,9 @@ print("<br>")
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
 predictions = []
-#for samples in input_content_list:
-#  temp = probability_model.predict(samples)
-#  predictions.append(temp)
-#predictions = probability_model.predict(total_content[0][0])
-
 for samples in total_content[0]:
   temp = probability_model.predict(samples)
   predictions.append(temp)
-
-
-
 
 print("prediction made")
 print("<br>")
@@ -91,10 +82,15 @@ print(predictions)
 
 
 
-import numpy as np
+import csv
+with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', newline='') as myfile:
+     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+     wr.writerow(predictions)
 
-#print("real news_percentage={}, fake news_percentage={}".format(predictions[0],predictions[1]))
-print(np.argmax(predictions))
+
+
+
+
 
 
 
