@@ -1,18 +1,27 @@
 #using 200928-1_model.h5, content only
 
+real_news_example:
+    apple_realtime
+    central
+    chinatimes
+    ettoday
+    liberty
+    udn_realtime
+
+
 provider                    credibility_rate
 apple_realtime200V1         81%
 apple_realtime200V2         75%
-central200V1--0             81.5%
-chinatimes200V1--0          
-chinatimes200V2
-ettoday200V1--0
+central200V1                81.5%
+chinatimes200V1             77.5%
+chinatimes200V2             
+ettoday200V1
 ettoday200V2
 globalmilitary200V1
 globalmilitary200V2
 kknews200V1
 kknews200V2
-liberty200V1--0
+liberty200V1
 liberty200V2
 mission200V1
 mission200V2
@@ -20,5 +29,5 @@ nooho200V1
 nooho200V2
 qiqi200V1
 qiqi200V2
-udn_realtime200V1--0
+udn_realtime200V1
 udn_realtime200V2
