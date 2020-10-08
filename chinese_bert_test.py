@@ -86,16 +86,14 @@ print("<br>")
 print(predictions)
 
 
-
+import numpy as np
 import csv
 with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
-'''
-#check credibility
-accurate_num = 0
-for i in range(range_due_to_dataset):
-  if predictions[0]
-'''
 
-print(predictions[1][0])
+#check credibility
+accurate_count = 0
+for i in range(3):
+  if np.argmax(predictions[i][0]) == label_due_to_news_provider:
+    accurate_count+=1
