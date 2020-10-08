@@ -4,7 +4,7 @@ demo = sys.argv[0]
 title = sys.argv[1]
 content = sys.argv[2]
 input_array = sys.argv[1:]
-print("<br> parameters imported")
+#print("<br> parameters imported")
 
 ###encoding transfer###
 
@@ -28,7 +28,7 @@ content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
 #print("<br>length: ")
 #print(len(content))
 
-print("<br>done decoding<br><br>")
+#print("<br>done decoding<br><br>")
 
 print("<br> -- 內文如下 -- <br>")
 print("標題: ")
@@ -45,20 +45,20 @@ for i in range(4):
 #using chinese_bert_wwm https://github.com/ymcui/Chinese-BERT-wwm
 
 import tensorflow as tf
-print("tensorflow imported")
-print("<br>")
+#print("tensorflow imported")
+#print("<br>")
 import tensorflow_datasets
-print("tensorflow_datsets imported")
-print("<br>")
+#print("tensorflow_datsets imported")
+#print("<br>")
 from transformers import *
-print("transformers imported")
-print("<br>")
+#print("transformers imported")
+#print("<br>")
 
 #tokenizer = BertTokenizer.from_pretrained("hfl/chinese-bert-wwm-ext")
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
 
-print("bertmodel initialized")
-print("<br>")
+#print("bertmodel initialized")
+#print("<br>")
 
 df = [title, content]
 
@@ -70,24 +70,24 @@ def encode_words(s):
 input_title = encode_words(df[0])
 input_content = encode_words(df[1])
 
-print("done encoding")
-print("<br>")
+#print("done encoding")
+#print("<br>")
 
 ###choose testing range: title or content or both###
 total_content = [ input_content ]
-print("content chose")
-print("<br>")
+#print("content chose")
+#print("<br>")
 
 ###load model###
 test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/200928-1_model.h5')
-print("model loaded")
-print("<br>")
+#print("model loaded")
+#print("<br>")
 
 ###make prediction###
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
 predictions = probability_model.predict(total_content)
-print("prediction made")
-print("<br>")
+#print("prediction made")
+#print("<br>")
 
 import numpy as np
 print("real news_percentage={:.3f}%, fake news_percentage={:.3f}%<br>".format(predictions[0][0]*100,predictions[0][1]*100))

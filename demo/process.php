@@ -16,6 +16,8 @@ $param2 = $_POST['content'];
 $param1 = preg_replace('/\s(?=)/', '', $param1);
 $param2 = preg_replace('/\s(?=)/', '', $param2);
 
+$param1 = preg_replace('/\(*/', '', $param1);
+$param2 = preg_replace('/\)*/', '', $param2);
 
 
 
