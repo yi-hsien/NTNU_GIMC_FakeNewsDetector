@@ -9,10 +9,9 @@ test_string = ['駐']
 test_u = r'\udce9\udca7\udc90'
 
 print(test_string)
-
-
-
-
-
 print(test_u)
 
+import json
+
+test_u_load = json.loads(test_u)
+print(test_u_load)
