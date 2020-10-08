@@ -87,15 +87,8 @@ with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', n
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 
+#check credibility
 
-
-
-
-
-
-
-
-
-
-
-
+true_label = df1[['labeled']]
+print(predictions.shape)
+print(true_label.shape)
