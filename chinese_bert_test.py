@@ -97,5 +97,5 @@ accurate_num = 0
 for i in range(range_due_to_dataset):
   if predictions[0]
 '''
-print(predictions[0][1])
+
 print(predictions[1][0])
