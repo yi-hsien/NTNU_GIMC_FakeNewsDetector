@@ -1,3 +1,26 @@
+## best example of all
+test = '\udce9\udca7\udc90'
+
+test = test.encode('utf-8', errors='surrogateescape').decode('utf-8')
+
+print(test)
+print(len(test))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #import tensorflow as tf
 #import tensorflow_datasets
 #from transformers import *
@@ -19,11 +42,6 @@ test_u = json.loads(test_u)
 print(test_u)
 '''
 
-test = '\udce9\udca7\udc90'
-
-test = test.encode('utf-8', errors='surrogateescape').decode('utf-8')
-
-print(test)
 
 #import json
 
