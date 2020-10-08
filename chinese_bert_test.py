@@ -29,7 +29,7 @@ def load_newsdata():
     return(df)
 
 df = load_newsdata()
-df1 = df['title', 'content', 'labeled']
+df1 = df[['title', 'content', 'labeled']]
 
 
 
