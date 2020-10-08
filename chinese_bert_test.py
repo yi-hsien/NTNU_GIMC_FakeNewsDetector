@@ -4,7 +4,7 @@
 
 #this file is used to find how accurate a model is to a specific news provider
 #remember to change this accordingly
-label_due_to_news_provider = 1
+label_due_to_news_provider = 0
 range_due_to_dataset = 200
 
 import tensorflow as tf
@@ -24,7 +24,7 @@ print("bertmodel initialized")
 print("<br>")
 
 
-CSV_PATH = "/home/yi-hsien/ntnu/test_csv/qiqi200V2.csv"
+CSV_PATH = "/home/yi-hsien/ntnu/test_csv/udn_realtime200V1.csv"
 
 import pandas as pd
 def load_newsdata():
@@ -88,7 +88,7 @@ print("<br>")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/qiqi200V2_results.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/udn_realtime200V1_results.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 
