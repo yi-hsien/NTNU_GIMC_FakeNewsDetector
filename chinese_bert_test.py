@@ -93,4 +93,4 @@ true_label = df1[['labeled']]
 print(len(predictions))
 print(len(true_label))
 print(predictions[0][0])
-print(true_label[0])
+print(true_label)
