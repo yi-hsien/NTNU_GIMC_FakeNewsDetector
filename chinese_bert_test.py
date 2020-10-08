@@ -83,7 +83,7 @@ for samples in total_content[0]:
 
 print("prediction made")
 print("<br>")
-print(predictions)
+#print(predictions)
 
 
 import numpy as np
@@ -97,3 +97,5 @@ accurate_count = 0
 for i in range(3):
   if np.argmax(predictions[i][0]) == label_due_to_news_provider:
     accurate_count+=1
+
+print(accurate_count)
