@@ -1,0 +1,4 @@
+#using 200928-1_model.h5, content only
+
+provider                    credibility_rate
+apple_realtime200V1         
