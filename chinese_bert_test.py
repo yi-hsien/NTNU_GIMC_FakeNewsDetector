@@ -24,7 +24,7 @@ print("bertmodel initialized")
 print("<br>")
 
 
-CSV_PATH = "/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv"
+CSV_PATH = "/home/yi-hsien/ntnu/test_csv/apple_realtime200V2.csv"
 
 import pandas as pd
 def load_newsdata():
@@ -88,7 +88,7 @@ print("<br>")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1_results.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv/apple_realtime200V2_results.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 
@@ -98,4 +98,4 @@ for i in range(range_due_to_dataset):
   if np.argmax(predictions[i][0]) == label_due_to_news_provider:
     accurate_count+=1
 
-print("credibility rate is {:.5f}%".format(accurate_count/range_due_to_dataset*100))
+print("credibility rate is {}%".format(accurate_count/range_due_to_dataset*100))
