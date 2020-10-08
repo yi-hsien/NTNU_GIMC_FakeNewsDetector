@@ -9,7 +9,7 @@ print("<br> parameters imported")
 ###encoding transfer###
 
 ##title
-title = '\''+title+'\''
+#title = '\''+title+'\''
 #print("<br>original length: ")
 #print(len(title))
 #print("<br>")
@@ -19,7 +19,7 @@ title = title.encode('utf-8', errors='surrogateescape').decode('utf-8')
 #print(len(title))
 
 ##content
-content = '\''+content+'\''
+#content = '\''+content+'\''
 #print("<br>original length: ")
 #print(len(content))
 #print("<br>")

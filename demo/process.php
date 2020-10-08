@@ -22,9 +22,9 @@ $param2 = $_POST['content'];
 $path = "PYTHONIOENCODING=utf-8 python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo_json.py ";
 //passthru($path.$param1.' '.$param2);
 
-echo $param1.' title length: '.strlen($param1);
-echo $param2.' content length: '.strlen($param2);
-echo "<br>";
+//echo $param1.' title length: '.strlen($param1);
+//echo $param2.' content length: '.strlen($param2);
+//echo "<br>";
 
 
 
