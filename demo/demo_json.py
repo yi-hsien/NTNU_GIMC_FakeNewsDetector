@@ -91,7 +91,8 @@ print("<br>")
 
 import numpy as np
 print("real news_percentage={}, fake news_percentage={}<br>".format(predictions[0][0],predictions[0][1]))
-print("此篇為假新聞之機率有: {}<br>".format(predictions[1]))
+result = np.argmax(predictions)
+print("此篇為假新聞之機率有: {}<br>".format(predictions[0][1]))
 if result == 1:
   print("認定為假新聞")
 else:
