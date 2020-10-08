@@ -72,11 +72,17 @@ print("<br>")
 
 
 probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
-#predictions = []
+predictions = []
 #for samples in input_content_list:
 #  temp = probability_model.predict(samples)
 #  predictions.append(temp)
-predictions = probability_model.predict(total_content[0][0])
+#predictions = probability_model.predict(total_content[0][0])
+
+for samples in total_content[0]:
+  temp = probability_model.predict(samples)
+  predictions.append(temp)
+
+
 
 
 print("prediction made")
