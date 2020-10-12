@@ -56,6 +56,6 @@ nooho200V2                  93%
 qiqi200V1                   99.5%
 qiqi200V2                   98%
 udn_realtime200V1           65%
-udn_realtime200V2           
+udn_realtime200V2           69%
 
 
