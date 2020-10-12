@@ -10,7 +10,7 @@ from transformers import *
 TAKE_SIZE = 500
 BUFFER_SIZE = 10000
 BATCH_SIZE = 64
-EPOCHS_NUM = 10
+EPOCHS_NUM = 20
 CSV_PATH = "/home/csliao/tf01/dataset/adclu2nmqgk82R.csv"
 
 
@@ -62,11 +62,11 @@ vocab_size = 21128
 model = tf.keras.Sequential()
 model.add(tf.keras.layers.Embedding(vocab_size,64))
 model.add(tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)))
-for units in [64]:
+for units in [64,1024]:
   model.add(tf.keras.layers.Dense(units, activation = 'relu'))
 model.add(tf.keras.layers.Dense(2))
 
-opt = tf.keras.optimizers.Adam(learning_rate=0.0001)
+opt = tf.keras.optimizers.Adam(learning_rate=0.00001)
 
 model.compile(optimizer=opt,
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
