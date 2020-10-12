@@ -51,7 +51,7 @@ liberty200V1                90%
 liberty200V2                85%
 mission200V1                96%
 mission200V2                92.5%
-nooho200V1                  
+nooho200V1                  94%
 nooho200V2                  
 qiqi200V1                   
 qiqi200V2                   
