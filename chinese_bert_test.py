@@ -24,7 +24,7 @@ print("bertmodel initialized")
 print("<br>")
 
 
-CSV_PATH = "/home/yi-hsien/ntnu/test_csv/udn_realtime200V2.csv"
+CSV_PATH = "/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv"
 
 import pandas as pd
 def load_newsdata():
@@ -67,7 +67,7 @@ print("<br>")
 
 
 
-test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/200928-1_model.h5')
+test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/201011_model.h5')
 print("model loaded")
 print("<br>")
 
@@ -88,7 +88,7 @@ print("<br>")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/udn_realtime200V2_results.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/apple_realtime200V1_results.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 
