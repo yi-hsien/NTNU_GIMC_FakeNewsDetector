@@ -35,7 +35,7 @@ udn_realtime200V2           81%
 #using 201011-1_model.h5, bert, content only
 
 provider                    credivility_rate
-apple_realtime200V1         
+apple_realtime200V1         46.5%
 apple_realtime200V2         
 central200V1                
 chinatimes200V1             
