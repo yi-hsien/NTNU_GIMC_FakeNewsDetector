@@ -1,5 +1,3 @@
-#using 200928-1_model.h5, content only
-
 real_news_example:
     apple_realtime
     central
@@ -8,6 +6,7 @@ real_news_example:
     liberty
     udn_realtime
 
+#using 200928-1_model.h5, bert-ext, content only
 
 provider                    credibility_rate
 apple_realtime200V1         81%
@@ -31,3 +30,8 @@ qiqi200V1                   94%
 qiqi200V2                   94%
 udn_realtime200V1           85%
 udn_realtime200V2           81%
+
+
+#using 201011-1_model.h5, bert, content only
+
+provider		    credivility_rate
