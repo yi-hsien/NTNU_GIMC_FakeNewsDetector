@@ -72,6 +72,8 @@ model.compile(optimizer=opt,
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 
+print(model.summary())
+
 history = model.fit(train_data, epochs=EPOCHS_NUM , validation_data=test_data)
 
 
@@ -103,3 +105,7 @@ plt.legend(['train_loss', 'test_val_loss'], loc='best')
 plt.savefig('/home/yi-hsien/ntnu/test1_loss.png')
 plt.show()
 plt.close()
+
+
+model.save('/home/yi-hsien/ntnu/test1_model.h5')
+model.save_weights('/home/yi-hsien/ntnu/test1_model_weight.h5')
