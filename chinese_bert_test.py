@@ -7,6 +7,15 @@
 label_due_to_news_provider = 0
 range_due_to_dataset = 200
 
+#other things to change
+'''
+model_path
+data_name
+data_result_name
+tokenizer_path
+'''
+
+
 import tensorflow as tf
 print("tensorflow imported")
 print("<br>")
@@ -24,7 +33,7 @@ print("bertmodel initialized")
 print("<br>")
 
 
-CSV_PATH = "/home/yi-hsien/ntnu/test_csv/chinatimes200V1.csv"
+CSV_PATH = "/home/yi-hsien/ntnu/test_csv/chinatimes200V2.csv"
 
 import pandas as pd
 def load_newsdata():
@@ -67,7 +76,7 @@ print("<br>")
 
 
 
-test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/200928-1_model.h5')
+test_model = tf.keras.models.load_model('/home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/models/201011_model.h5')
 print("model loaded")
 print("<br>")
 
@@ -88,7 +97,7 @@ print("<br>")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/chinatimes200V1_results.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/chinatimes200V2_results.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 

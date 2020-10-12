@@ -6,6 +6,7 @@ real_news_example:
     liberty
     udn_realtime
 
+#test-2020_10_08
 #using 200928-1_model.h5, bert-ext, content only
 
 provider                    credibility_rate
@@ -31,7 +32,7 @@ qiqi200V2                   94%
 udn_realtime200V1           85%
 udn_realtime200V2           81%
 
-
+#test-2020_10_12
 #using 201011-1_model.h5, bert, content only
 
 provider                    credivility_rate
