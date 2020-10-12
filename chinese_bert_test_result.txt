@@ -49,7 +49,7 @@ kknews200V1                 94%
 kknews200V2                 95%
 liberty200V1                90%
 liberty200V2                85%
-mission200V1                
+mission200V1                96%
 mission200V2                
 nooho200V1                  
 nooho200V2                  
