@@ -33,7 +33,7 @@ print("bertmodel initialized")
 print("<br>")
 
 
-CSV_PATH = "/home/yi-hsien/ntnu/test_csv/udn_realtime200V1.csv"
+CSV_PATH = "/home/yi-hsien/ntnu/test_csv/udn_realtime200V2.csv"
 
 import pandas as pd
 def load_newsdata():
@@ -97,7 +97,7 @@ print("<br>")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/udn_realtime200V1.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/udn_realtime200V2.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 
