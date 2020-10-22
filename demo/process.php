@@ -21,7 +21,7 @@ $param2 = preg_replace('/\)*/', '', $param2);
 
 
 
-$path = "PYTHONIOENCODING=utf-8 python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo_json.py ";
+$path = "PYTHONIOENCODING=utf-8 python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo_json_feature.py ";
 //passthru($path.$param1.' '.$param2);
 
 //echo $param1.' title length: '.strlen($param1);
