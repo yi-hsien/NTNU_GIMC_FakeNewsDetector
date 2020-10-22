@@ -33,7 +33,7 @@ $path = "PYTHONIOENCODING=utf-8 python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDe
 error_reporting(E_ALL); 
 ini_set('display_errors', 1);
 
-exec($path.$param1.' '.$param2, $output);
+exec($path.$param1.' '.$param2.' 2>&1', $output);
 
 foreach ($output as $value)
     echo $value
