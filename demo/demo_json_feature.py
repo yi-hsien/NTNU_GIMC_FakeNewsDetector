@@ -140,16 +140,14 @@ exp = explainer.explain_instance(
     text, predict_proba, num_features=6, num_samples = 10
 )
 
-
-
-
-
-
 exp_list = exp.as_list()
 
 
 
 
+
+print('?>')
 print(exp.as_html())
+print('<?php')
 
 
