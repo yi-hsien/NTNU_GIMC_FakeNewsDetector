@@ -143,9 +143,10 @@ exp = explainer.explain_instance(
 exp_list = exp.as_list()
 
 result = exp.as_html()
-trimmed_result = result[73:-6]
 
-modify_new_line = trimmed_result.replace(r"\n","<br>")
+trimmed_result = result[6:-6]
+
+
 
 print(trimmed_result)
 

@@ -1,4 +1,4 @@
-<html>
+
 <head>
 
 <?php
@@ -40,11 +40,10 @@ exec($path.$param1.' '.$param2, $output);
 //exec($path.$param1.' '.$param2.' 2>&1', $output);
 
 foreach ($output as $value)
-    echo $value
+    echo $value;
 
 
 ?>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8″>
 </head>
 
-</html>
