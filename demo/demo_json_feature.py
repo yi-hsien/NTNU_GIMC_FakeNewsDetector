@@ -142,4 +142,4 @@ exp = explainer.explain_instance(
 
 exp_list = exp.as_list()
 
-print(exp.show_in_notebook())
+result = exp.as_html()
