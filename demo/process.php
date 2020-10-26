@@ -14,12 +14,18 @@ echo $output;
 */
 $param1 = $_POST['title'];
 $param2 = $_POST['content'];
+
 $param1 = preg_replace('/\s(?=)/', '', $param1);
 $param2 = preg_replace('/\s(?=)/', '', $param2);
 
 $param1 = preg_replace('/\(*/', '', $param1);
+$param2 = preg_replace('/\(*/', '', $param2);
+
+$param1 = preg_replace('/\)*/', '', $param1);
 $param2 = preg_replace('/\)*/', '', $param2);
 
+$param1 = preg_replace('/\.*/', '', $param1);
+$param2 = preg_replace('/\.*/', '', $param2);
 
 
 $path = "PYTHONIOENCODING=utf-8 python3 /home/yi-hsien/ntnu/NTNU_GIMC_FakeNewsDetector/demo/demo_json_feature.py ";
