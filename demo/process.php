@@ -44,7 +44,7 @@ echo "<br>".sizeof($output)."<br>";
 
 
 foreach ($output as $value)
-    echo $value."<br>";
+    echo $value."\n";
 
 
 ?>
