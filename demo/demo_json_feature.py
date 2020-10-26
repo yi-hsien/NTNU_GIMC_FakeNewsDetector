@@ -30,12 +30,18 @@ content = content.encode('utf-8', errors='surrogateescape').decode('utf-8')
 
 #print("<br>done decoding<br><br>")
 
-print("<br><span style='font-size:27px'> -- 內文如下 -- <br>")
+print("<br><span style='font-size:20px'> -- 內文如下 -- <br>")
 print("標題: ")
+
 print(title)
 print("<br>")
 print("內文: ")
 print(content)
+print("</span>")
+
+print("<span style='font-size:27px'>")
+
+
 
 for i in range(4):
   print("<br>")
