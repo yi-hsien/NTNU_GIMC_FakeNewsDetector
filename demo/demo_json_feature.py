@@ -150,4 +150,6 @@ trimmed_result = result[6:-6]
 
 print(trimmed_result)
 
-print(exp_list)
+for items in exp_list:
+  print(items)
+  print("<br>")
