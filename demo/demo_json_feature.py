@@ -144,7 +144,7 @@ exp_list = exp.as_list()
 
 result = exp.as_html()
 
-trimmed_result = result[6:-6]
+trimmed_result = result[6:-7]
 
 
 
