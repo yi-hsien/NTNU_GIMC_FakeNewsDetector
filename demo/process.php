@@ -1,3 +1,4 @@
+<html>
 <head>
 
 <?php
@@ -42,3 +43,5 @@ foreach ($output as $value)
 ?>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8″>
 </head>
+
+</html>
