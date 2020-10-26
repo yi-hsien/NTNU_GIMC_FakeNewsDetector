@@ -142,12 +142,4 @@ exp = explainer.explain_instance(
 
 exp_list = exp.as_list()
 
-
-
-
-
-print('?>')
-print(exp.as_html())
-print('<?php')
-
-
+print(exp.show_in_notebook())
