@@ -39,7 +39,7 @@ exec($path.$param1.' '.$param2, $output);
 
 //exec($path.$param1.' '.$param2.' 2>&1', $output);
 
-echo "<br>".sizeof($output)."<br>";
+
 
 
 
