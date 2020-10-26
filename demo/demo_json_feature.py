@@ -127,12 +127,12 @@ def predict_one(X): #take in a [""]
   total_content = pad([encode_words(X)])
   probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
   lime_predictions = probability_model.predict(total_content)
-  print(lime_predictions)
+  #print(lime_predictions)
   return lime_predictions[0][1] #return the percentage of fakeness
 
 def predict_proba(X): #should take a list instead of one
   content = X
-  print(content) 
+  #print(content) 
   return np.array([[float(1 - predict_one(x)), float(predict_one(x))] for x in content])
 
 explainer = LimeTextExplainer(class_names=["real", "fake"])
