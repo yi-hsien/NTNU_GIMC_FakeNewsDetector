@@ -150,3 +150,4 @@ trimmed_result = result[6:-6]
 
 print(trimmed_result)
 
+print(exp_list)
