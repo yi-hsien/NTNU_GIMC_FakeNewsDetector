@@ -41,6 +41,7 @@ exec($path.$param1.' '.$param2, $output);
 
 foreach ($output as $value)
     echo $value;
+    echo "<br>";
 
 
 ?>
