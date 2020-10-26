@@ -145,7 +145,7 @@ exp_list = exp.as_list()
 result = exp.as_html()
 trimmed_result = result[6:-6]
 
-modify_new_line = trimmed_result.replace("\n","<br>")
+modify_new_line = trimmed_result.replace(r"\n","<br>")
 
 print(trimmed_result)
 
