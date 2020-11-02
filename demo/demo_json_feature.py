@@ -158,7 +158,8 @@ print(trimmed_result)
 
 if abs(exp_list[0][1]) > 0.02:
   print("明顯特徵為:<br>")
-  for items in exp_list:
+  for (item,weight) in exp_list:
+    if abs(weight) > 0.02:
     print(items)
     print("<br>")
 else:
