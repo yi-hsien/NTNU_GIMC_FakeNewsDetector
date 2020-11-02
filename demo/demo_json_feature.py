@@ -156,6 +156,14 @@ trimmed_result = result[6:-7]
 
 print(trimmed_result)
 
-for items in exp_list:
-  print(items)
-  print("<br>")
+if abs(exp_list[0][1]) > 0.02:
+  print("明顯特徵為:<br>")
+  for items in exp_list:
+    print(items)
+    print("<br>")
+else:
+  print("無明顯特徵，重新整理以獲取更多結果... <br>")
+
+
+
+
