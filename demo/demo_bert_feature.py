@@ -63,7 +63,7 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:500]
+  return token_ids[:127]
 
 def bert_encode(data_to_be_encoded):
   content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])
@@ -113,6 +113,7 @@ if result == 1:
 else:
   print("<span style='font-size:40px'>認定為真新聞</span>")
 
+'''
 
 ###################################
 ##############lime#################
@@ -159,4 +160,4 @@ else:
   print("無明顯特徵，重新整理以獲取更多結果... <br>")
 
 
-
+'''
