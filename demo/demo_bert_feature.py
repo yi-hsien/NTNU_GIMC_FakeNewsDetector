@@ -128,6 +128,7 @@ text = content
 text_len = len(content)
 
 def predict_one(X): #take in a [""]
+  print (X[0])
   processed_input = one_time_content_encode(content for content in X[0])
   lime_predictions = probability_model.predict(loaded_model(processed_input)[0])
   #print(lime_predictions)
