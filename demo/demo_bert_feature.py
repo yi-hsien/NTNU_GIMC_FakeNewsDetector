@@ -113,7 +113,7 @@ if result == 1:
 else:
   print("<span style='font-size:40px'>認定為真新聞</span>")
 
-'''
+
 
 
 ###################################
@@ -127,42 +127,28 @@ feature_found = False
 text = content
 text_len = len(content)
 
-def pad(X):
-  pad_num = text_len
-  if len(X[0])> pad_num :
-    return [X[0][:pad_num]]
-  else:
-    for i in range(len(X)):
-      X[i] = X[i] + [0]*(pad_num - len(X[i]))
-    return X
-
-
-
 def predict_one(X): #take in a [""]
-  total_content = pad([encode_words(X)])
-  probability_model = tf.keras.Sequential([test_model,tf.keras.layers.Softmax()])
-  lime_predictions = probability_model.predict(total_content)
+  processed_input = one_time_content_encode(content for content in X[0])
+  lime_predictions = probability_model.predict(loaded_model(processed_input)[0])
   #print(lime_predictions)
   return lime_predictions[0][1] #return the percentage of fakeness
+
 
 def predict_proba(X): #should take a list instead of one
   content = X
   #print(content) 
-  return np.array([[float(1 - predict_one(x)), float(predict_one(x))] for x in content])
+  one_time_prediction = predict_one(X)
+  return np.array([[float(1 - one_time_prediction), float(one_time_prediction)] for x in content])
 
 explainer = LimeTextExplainer(class_names=["real", "fake"])
 exp = explainer.explain_instance(
     text, predict_proba, num_features=6, num_samples = 10
 )
 
+
 exp_list = exp.as_list()
-
 result = exp.as_html()
-
 trimmed_result = result[6:-7]
-
-
-
 print(trimmed_result)
 
 if abs(exp_list[0][1]) > 0.02:
@@ -178,5 +164,3 @@ else:
 
 
 
-
-'''
