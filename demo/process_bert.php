@@ -36,9 +36,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-//exec($path.$param1.' '.$param2, $output);
+exec($path.$param1.' '.$param2, $output);
 
-exec($path.$param1.' '.$param2.' 2>&1', $output);
+//exec($path.$param1.' '.$param2.' 2>&1', $output);
 
 
 
