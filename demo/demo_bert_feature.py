@@ -128,8 +128,8 @@ text = content
 text_len = len(content)
 
 def predict_one(X): #take in a [""]
-  print (X[0])
-  processed_input = one_time_content_encode(content for content in X[0])
+  one_time_content = X[0]
+  processed_input = one_time_content_encode(one_time_content)
   lime_predictions = probability_model.predict(loaded_model(processed_input)[0])
   #print(lime_predictions)
   return lime_predictions[0][1] #return the percentage of fakeness
