@@ -99,10 +99,10 @@ loaded_model = tf.saved_model.load(bert_model_path)
 probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 #process data
-processed_input = one_time_content_encode(input_content)
+processed_input = one_time_content_encode(content)
 
 #make prediction
-predictions = probability_model.predict(loaded(processed_input)[0])
+predictions = probability_model.predict(loaded_model(processed_input)[0])
 
 import numpy as np
 print("real news_percentage={:.3f}%, fake news_percentage={:.3f}%<br>".format(predictions[0][0]*100,predictions[0][1]*100))
