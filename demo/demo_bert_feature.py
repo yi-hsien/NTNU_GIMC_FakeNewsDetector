@@ -63,7 +63,7 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:127]
+  return token_ids[:500]
 
 def bert_encode(data_to_be_encoded):
   content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])
@@ -114,15 +114,12 @@ else:
   print("<span style='font-size:40px'>認定為真新聞</span>")
 
 
-
-
 ###################################
 ##############lime#################
 ###################################
 from lime import lime_text
 from lime.lime_text import LimeTextExplainer
 feature_found = False
-
 
 text = content
 text_len = len(content)
@@ -134,7 +131,6 @@ def predict_one(X): #take in a [""]
   #print(lime_predictions)
   return lime_predictions[0][1] #return the percentage of fakeness
 
-
 def predict_proba(X): #should take a list instead of one
   content = X
   #print(content) 
@@ -145,7 +141,6 @@ explainer = LimeTextExplainer(class_names=["real", "fake"])
 exp = explainer.explain_instance(
     text, predict_proba, num_features=6, num_samples = 10
 )
-
 
 exp_list = exp.as_list()
 result = exp.as_html()
