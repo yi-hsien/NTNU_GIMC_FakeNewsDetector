@@ -46,9 +46,6 @@ glue_train_labels = tf.convert_to_tensor(train_data['labeled'])
 glue_validation = bert_encode(validation_data)
 glue_validation_labels = validation_data['labeled']
 
-print(glue_train.values)
-
-
 for key, value in glue_train.items():
   print(f'{key:15s} shape: {value.shape}')
 
@@ -89,7 +86,7 @@ model.compile(
 #rly important, only train classifier
 model.bert.trainable = False
 
-model.summary()
+#model.summary()
 
 model.fit(glue_train,glue_train_labels,validation_data=(glue_validation,glue_validation_labels),batch_size=batch_size,epochs=epochs,
           steps_per_epoch=steps_per_epoch)
