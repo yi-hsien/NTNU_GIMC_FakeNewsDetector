@@ -59,11 +59,14 @@ total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv
 
 print(total_data)
 
+predictions = []
+
 for samples in total_data['content']:
     processed_input = one_time_content_encode(samples)
-    predictions = probability_model.predict(loaded_model(processed_input)[0])
-    print(predictions)
-    break
+    temp = probability_model.predict(loaded_model(processed_input)[0])
+    predictions.append(temp)
+    
+print(predictions)
 
 
 
