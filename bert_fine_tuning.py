@@ -94,7 +94,7 @@ model.fit(glue_train,glue_train_labels,validation_data=(glue_validation,glue_val
 
 tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/bert_2')
 
-
+'''
 
 import matplotlib.pyplot as plt
 import matplotlib
@@ -119,3 +119,6 @@ plt.legend(['train_loss', 'test_val_loss'], loc='best')
 plt.savefig('/home/yi-hsien/ntnu/fine_tune_loss.png')
 plt.show()
 plt.close()
+
+
+'''
