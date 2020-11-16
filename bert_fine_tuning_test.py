@@ -23,7 +23,7 @@ def load_newsdata(RAW_CSV):
     pd.read_csv(RAW_CSV,sep=',',encoding='utf8')
     df = pd.read_csv(RAW_CSV, sep=',', encoding='utf8')
     df = df.sample(frac=1).reset_index(drop=True)
-    return(df[['content', 'labeled']]) #returns content and label
+    return(df[['content', 'labeled']][0]) #returns content and label
 def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
