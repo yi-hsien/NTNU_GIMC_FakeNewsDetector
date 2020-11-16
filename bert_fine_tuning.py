@@ -63,13 +63,8 @@ checkpoint.restore(
 
 
 # Set up epochs and steps
-<<<<<<< HEAD
 epochs = 3
-batch_size = 5
-=======
-epochs = 10
 batch_size = 32
->>>>>>> d55edba1172e795a12e86e37ff103fb8cbf989bf
 eval_batch_size = 32
 
 train_data_size = len(glue_train_labels)
