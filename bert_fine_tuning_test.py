@@ -65,15 +65,20 @@ for samples in total_data['content']:
     processed_input = one_time_content_encode(samples)
     temp = probability_model.predict(loaded_model(processed_input)[0])
     predictions.append(temp)
-    
-print(predictions)
+   
 
 
+import numpy as np
+import csv
+with open('/home/yi-hsien/ntnu/test_csv_results/apple_realtime200V1.csv', 'w', newline='') as myfile:
+     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+     wr.writerow(predictions)
 
 
+#check credibility
+accurate_count = 0
+for i in range(range_due_to_dataset):
+  if np.argmax(predictions[i][0]) == label_due_to_news_provider:
+    accurate_count+=1
 
-
-
-
-
-
+print("credibility rate is {}%".format(accurate_count/range_due_to_dataset*100))

@@ -6,8 +6,8 @@ real_news_example:
     liberty
     udn_realtime
 
-#test-2020_10_08
-#using 200928-1_model.h5, bert-ext, content only
+#test-2020_11_05
+#using bert_2, bert-ext, content only
 
 provider                    credibility_rate
 apple_realtime200V1         
