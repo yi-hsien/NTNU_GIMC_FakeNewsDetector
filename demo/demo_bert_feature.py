@@ -84,10 +84,10 @@ def one_time_content_encode(content_string):
   cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]*content_list.shape[0]
   content_list_ids = tf.concat([cls, content_list], axis=-1)
 
-  input_mask = tf.ones_like(content_list_ids).to_tensor(shape=512)
-  input_type_ids = tf.zeros_like(content_list_ids).to_tensor(shape=512)
+  input_mask = tf.ones_like(content_list_ids).to_tensor(shape=(1,512))
+  input_type_ids = tf.zeros_like(content_list_ids).to_tensor(shape=(1,512))
   inputs = {
-    'input_ids': content_list_ids.to_tensor(shape=512),
+    'input_ids': content_list_ids.to_tensor(shape=(1,512)),
     'input_mask': input_mask,
     'input_type_ids': input_type_ids
   }
@@ -100,6 +100,11 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 #process data
 processed_input = one_time_content_encode(content)
+
+
+for key, value in processed_input.items():
+  print(f'{key:15s} shape: {value.shape}')
+
 
 #make prediction
 predictions = probability_model.predict(loaded_model(processed_input)[0])
