@@ -27,8 +27,9 @@ def encode_words(s):
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
   return token_ids[:511]
 
-def bert_encode(data_to_be_encoded):
-  content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])
+
+def one_time_content_encode(content_string):
+  content_list = tf.ragged.constant([encode_words(content_string)])
   cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]*content_list.shape[0]
   content_list_ids = tf.concat([cls, content_list], axis=-1)
 
@@ -36,20 +37,6 @@ def bert_encode(data_to_be_encoded):
   input_type_ids = tf.zeros_like(content_list_ids).to_tensor(shape=(None,512))
   inputs = {
     'input_ids': content_list_ids.to_tensor(shape=(None,512)),
-    'input_mask': input_mask,
-    'input_type_ids': input_type_ids
-  }
-  return inputs
-
-def one_time_content_encode(content_string):
-  content_list = tf.ragged.constant([encode_words(content_string)])
-  cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]*content_list.shape[0]
-  content_list_ids = tf.concat([cls, content_list], axis=-1)
-
-  input_mask = tf.ones_like(content_list_ids).to_tensor()
-  input_type_ids = tf.zeros_like(content_list_ids).to_tensor()
-  inputs = {
-    'input_ids': content_list_ids.to_tensor(),
     'input_mask': input_mask,
     'input_type_ids': input_type_ids
   }
@@ -69,11 +56,13 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 #load entire news data, and process input dict
 total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv')
-glue_test = bert_encode(total_data)
 
-predictions = loaded_model(glue_test)
+for samples in total_data[['content']]:
+    processed_input = one_time_content_encode(content)
+    predictions = probability_model.predict(loaded_model(processed_input)[0])
+    print(predictions)
+    break
 
-print(predictions)
 
 
 
