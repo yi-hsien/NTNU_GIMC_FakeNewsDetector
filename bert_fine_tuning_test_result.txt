@@ -10,13 +10,13 @@ real_news_example:
 #using bert_2, bert-ext, content only
 
 provider                    credibility_rate
-apple_realtime200V1         
-apple_realtime200V2         
-central200V1                
-chinatimes200V1             
-chinatimes200V2             
-ettoday200V1                
-ettoday200V2                
+apple_realtime200V1         91%
+apple_realtime200V2         85%
+central200V1                80%
+chinatimes200V1             82.5%
+chinatimes200V2             82.5%
+ettoday200V1                90.5%
+ettoday200V2                86%
 globalmilitary200V1         
 globalmilitary200V2         
 kknews200V1                 
