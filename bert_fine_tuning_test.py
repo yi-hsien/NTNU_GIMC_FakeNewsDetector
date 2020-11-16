@@ -25,7 +25,7 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:127]
+  return token_ids[:511]
 
 def bert_encode(data_to_be_encoded):
   content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])
@@ -58,7 +58,7 @@ def one_time_content_encode(content_string):
 
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_1'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_2'
 
 #import/set_up tokenizer and model
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
