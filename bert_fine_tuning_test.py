@@ -57,6 +57,8 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 #load entire news data, and process input dict
 total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv')
 
+print(total_data)
+
 for samples in total_data[['content']]:
     processed_input = one_time_content_encode(content)
     predictions = probability_model.predict(loaded_model(processed_input)[0])
