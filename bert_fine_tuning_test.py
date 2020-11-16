@@ -23,7 +23,7 @@ def load_newsdata(RAW_CSV):
     pd.read_csv(RAW_CSV,sep=',',encoding='utf8')
     df = pd.read_csv(RAW_CSV, sep=',', encoding='utf8')
     df = df.sample(frac=1).reset_index(drop=True)
-    return(df[['content', 'labeled']][0]) #returns content and label
+    return(df[['content', 'labeled']]) #returns content and label
 def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
@@ -72,7 +72,7 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 #load entire news data, and process input dict
 total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv')
-glue_test = bert_encode(total_data)
+glue_test = bert_encode(total_data[0])
 
 predictions = loaded_model(glue_test)
 
