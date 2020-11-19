@@ -17,17 +17,17 @@ chinatimes200V1             82.5%
 chinatimes200V2             82.5%
 ettoday200V1                90.5%
 ettoday200V2                86%
-globalmilitary200V1         
-globalmilitary200V2         
-kknews200V1                 
-kknews200V2                 
-liberty200V1                
-liberty200V2                
-mission200V1                
-mission200V2                
-nooho200V1                  
-nooho200V2                  
-qiqi200V1                   
-qiqi200V2                   
-udn_realtime200V1           
-udn_realtime200V2           
+globalmilitary200V1         90.5%
+globalmilitary200V2         99.5%
+kknews200V1                 82.5%
+kknews200V2                 87.5%
+liberty200V1                99%
+liberty200V2                100%
+mission200V1                95.5%
+mission200V2                81%
+nooho200V1                  80.5%
+nooho200V2                  90.0%
+qiqi200V1                   96.5%
+qiqi200V2                   93%
+udn_realtime200V1           93.5%
+udn_realtime200V2           90.5%
