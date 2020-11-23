@@ -92,16 +92,19 @@ model.fit(glue_train,glue_train_labels,validation_data=(glue_validation,glue_val
           steps_per_epoch=steps_per_epoch)
 
 
-tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/bert_2')
+tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/bert_3')
 
-'''
+
+
+
+
 
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('AGG')
 # summarize history for accuracy
-plt.plot(model.history['accuracy'])
-plt.plot(model.history['val_accuracy'])
+plt.plot(model.history.history['accuracy'])
+plt.plot(model.history.history['val_accuracy'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
@@ -110,8 +113,8 @@ plt.savefig('/home/yi-hsien/ntnu/fine_tune_acc.png')
 plt.show()
 plt.cla()
 # summarize history for loss 
-plt.plot(model.history['loss']) 
-plt.plot(model.history['val_loss']) 
+plt.plot(model.history.history['loss']) 
+plt.plot(model.history.history['val_loss']) 
 plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
@@ -121,4 +124,3 @@ plt.show()
 plt.close()
 
 
-'''
