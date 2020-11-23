@@ -45,3 +45,6 @@ test3: bert_ext, lrn_rate = 0.00001, epochs = 10 , batch = 64,
 
 200930-1: bert_ext, lrn_rate = 0.00001, epochs = 50, batch = 64,
 	emb64, bid64, den64, den512, den2, ADAM
+
+201011:	  bert, lrn_rate = 0.00001, epochs = 50, batch = 64,
+	emb64, bid64, den64, den512, den2, ADAM
