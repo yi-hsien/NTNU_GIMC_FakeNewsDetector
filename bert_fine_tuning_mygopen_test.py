@@ -1,7 +1,7 @@
 #this file is used to find how accurate a fine_tuned_bert model is to a specific news provider
 #remember to change this accordingly
 label_due_to_news_provider = 1
-range_due_to_dataset = 140
+range_due_to_dataset = 250
 
 #other things to change
 '''
@@ -70,7 +70,7 @@ for samples in total_data['content']:
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/udn_realtime200V2.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/mygopen.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerow(predictions)
 

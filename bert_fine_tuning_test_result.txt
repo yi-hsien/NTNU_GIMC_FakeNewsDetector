@@ -31,3 +31,6 @@ qiqi200V1                   96.5%
 qiqi200V2                   93%
 udn_realtime200V1           93.5%
 udn_realtime200V2           90.5%
+
+mygopen                     67.1428%
+
