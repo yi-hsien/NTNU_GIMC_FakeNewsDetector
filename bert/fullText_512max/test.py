@@ -1,7 +1,7 @@
 #this file is used to find how accurate a fine_tuned_bert model is to a specific news provider
 #remember to change this accordingly
 label_due_to_news_provider = 0
-range_due_to_dataset = 200
+range_due_to_dataset = 100
 
 #other things to change
 '''
