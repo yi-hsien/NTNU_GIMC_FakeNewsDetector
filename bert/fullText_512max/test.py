@@ -74,7 +74,7 @@ for samples in total_data['content']:
     for i in range(len(raw_prediction_list)):
         temp = probability_model.predict(raw_prediction_list[i])
         string_prediction.append(temp)
-   predictions.append(string_prediction)
+    predictions.append(string_prediction)
    
 print("\n\n\n\npredictions:")
 print(predictions)
