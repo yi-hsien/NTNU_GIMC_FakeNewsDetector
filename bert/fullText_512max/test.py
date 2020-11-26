@@ -75,25 +75,28 @@ for samples in total_data['content']:
         temp = probability_model.predict(raw_prediction_list[i])
         string_prediction.append(temp)
     predictions.append(string_prediction)
-   
+    
 print("\n\n\n\npredictions:")
 print(predictions)
 print("\n\n\n\n")
 
-'''
+
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/udn_realtime200V2.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/apple_daily1001.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
-     wr.writerow(predictions)
+     for i in range(len(predictions)):
+        wr.writerow(predictions[i])
 
 
 #check credibility
 accurate_count = 0
 for i in range(range_due_to_dataset):
-  if np.argmax(predictions[i][0]) == label_due_to_news_provider:
-    accurate_count+=1
+    final_decision = 0
+    for j in range(len(predictions[i])):
+        if np.argmax(predictions[i][j]) == 1 : 
+            final_decision = 1
+    if final_decision == label_due_to_news_provider:
+        accurate_count+=1
 
 print("credibility rate is {}%".format(accurate_count/range_due_to_dataset*100))
-
-'''
