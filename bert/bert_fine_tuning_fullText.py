@@ -1,3 +1,4 @@
+#take 512 at a time, read full text
 import tensorflow as tf
 import tensorflow_datasets
 from transformers import *
@@ -12,16 +13,25 @@ def load_newsdata(RAW_CSV):
     df = df.sample(frac=1).reset_index(drop=True)
     return(df[['content', 'labeled']]) #returns content and label
 
-
-
-def encode_words(s):
+def encode_words(s,content_list,label,label_list):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:511]
+  content_list.append(token_ids[:511])
+  label_list.append(label)
+  while len(token_ids)>511:
+    token_ids = token_ids[512:]
+    content_list.append(token_ids[:511])
+    label_list.append(label)
 
-def bert_encode(data_to_be_encoded):
-  content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])
+def bert_encode(data_to_be_encoded,label_list):
+  content_count = 0
+  content_list = []
+  for content_count in range(len(data_to_be_encoded['content'])):
+    encode_words(data_to_be_encoded['content'][content_count],
+                 content_list,data_to_be_encoded['labeled'][content_count],
+                 label_list)
+  content_list = tf.ragged.constant(content_list)
   cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]*content_list.shape[0]
   content_list_ids = tf.concat([cls, content_list], axis=-1)
 
@@ -34,35 +44,29 @@ def bert_encode(data_to_be_encoded):
   }
   return inputs
 
-
-
-
-
-
-
-
-
-
 total_data = load_newsdata('/home/csliao/tf01/dataset/adclu2nmqgk82R.csv').sample(frac=1).reset_index(drop=True)
 
 train_data = total_data.sample(frac = 0.9)
 validation_data = total_data.drop(train_data.index)
 
-glue_train = bert_encode(train_data)
-glue_train_labels = tf.convert_to_tensor(train_data['labeled'])
 
+glue_train_labels = []
+glue_train = bert_encode(train_data,glue_train_labels)
+glue_train_labels = tf.convert_to_tensor(glue_train_labels)
 
-glue_validation = bert_encode(validation_data)
-glue_validation_labels = tf.convert_to_tensor(validation_data['labeled'])
+glue_validation_labels = []
+glue_validation = bert_encode(validation_data,glue_validation_labels)
+glue_validation_labels = tf.convert_to_tensor(glue_validation_labels)
 
+print('glue_train shape-->')
 for key, value in glue_train.items():
   print(f'{key:15s} shape: {value.shape}')
-
 print(f'glue_train_labels shape: {glue_train_labels.shape}')
 
-
-
-
+print('glue_validation shape-->')
+for key, value in glue_validation.items():
+  print(f'{key:15s} shape: {value.shape}')
+print(f'glue_validation_labels shape: {glue_validation_labels.shape}')
 
 
 
