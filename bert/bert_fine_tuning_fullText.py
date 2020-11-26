@@ -49,6 +49,9 @@ total_data = load_newsdata('/home/csliao/tf01/dataset/adclu2nmqgk82R.csv').sampl
 train_data = total_data.sample(frac = 0.9)
 validation_data = total_data.drop(train_data.index)
 
+print(train_data.keys())
+
+
 
 glue_train_labels = []
 glue_train = bert_encode(train_data,glue_train_labels)
