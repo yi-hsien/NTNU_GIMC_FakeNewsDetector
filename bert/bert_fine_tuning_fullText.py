@@ -14,7 +14,8 @@ def load_newsdata(RAW_CSV):
     return(df[['content', 'labeled']]) #returns content and label
 
 def encode_words(s,content_list,label,label_list):
-  print(s)
+  if s = None:
+    return
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
