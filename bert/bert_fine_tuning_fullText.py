@@ -28,8 +28,8 @@ def bert_encode(data_to_be_encoded,label_list):
   content_count = 0
   content_list = []
   for content_count in range(len(data_to_be_encoded['content'])):
-    encode_words(data_to_be_encoded['content'][content_count],
-                 content_list,data_to_be_encoded['labeled'][content_count],
+    encode_words(data_to_be_encoded['content'].get(content_count),
+                 content_list,data_to_be_encoded['labeled'].get(content_count),
                  label_list)
   content_list = tf.ragged.constant(content_list)
   cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]*content_list.shape[0]
@@ -49,7 +49,7 @@ total_data = load_newsdata('/home/csliao/tf01/dataset/adclu2nmqgk82R.csv').sampl
 train_data = total_data.sample(frac = 0.9)
 validation_data = total_data.drop(train_data.index)
 
-print(train_data.keys())
+print(train_data['content'])
 
 
 
