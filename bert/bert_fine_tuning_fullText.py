@@ -11,6 +11,9 @@ def load_newsdata(RAW_CSV):
     df = pd.read_csv(RAW_CSV, sep=',', encoding='utf8')
     df = df.sample(frac=1).reset_index(drop=True)
     return(df[['content', 'labeled']]) #returns content and label
+
+
+
 def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
@@ -34,6 +37,12 @@ def bert_encode(data_to_be_encoded):
 
 
 
+
+
+
+
+
+
 total_data = load_newsdata('/home/csliao/tf01/dataset/adclu2nmqgk82R.csv').sample(frac=1).reset_index(drop=True)
 
 train_data = total_data.sample(frac = 0.9)
@@ -44,12 +53,17 @@ glue_train_labels = tf.convert_to_tensor(train_data['labeled'])
 
 
 glue_validation = bert_encode(validation_data)
-glue_validation_labels = validation_data['labeled']
+glue_validation_labels = tf.convert_to_tensor(validation_data['labeled'])
 
 for key, value in glue_train.items():
   print(f'{key:15s} shape: {value.shape}')
 
 print(f'glue_train_labels shape: {glue_train_labels.shape}')
+
+
+
+
+
 
 
 #########data processing finished ########
