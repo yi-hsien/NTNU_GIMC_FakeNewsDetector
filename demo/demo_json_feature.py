@@ -143,7 +143,7 @@ def predict_proba(X): #should take a list instead of one
 
 explainer = LimeTextExplainer(class_names=["real", "fake"])
 exp = explainer.explain_instance(
-    text, predict_proba, num_features=6, num_samples = 1536
+    text, predict_proba, num_features=6, num_samples = 16
 )
 
 exp_list = exp.as_list()

@@ -102,8 +102,8 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 processed_input = one_time_content_encode(content)
 
 
-for key, value in processed_input.items():
-  print(f'{key:15s} shape: {value.shape}')
+#for key, value in processed_input.items():
+#  print(f'{key:15s} shape: {value.shape}')
 
 
 #make prediction
