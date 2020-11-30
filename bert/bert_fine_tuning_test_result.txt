@@ -55,13 +55,13 @@ kknews200V2                 49%
 liberty200V1                99.5%
 liberty200V2                100%
 mission200V1                79%
-mission200V2                
-nooho200V1                  
-nooho200V2                  
-qiqi200V1                   
-qiqi200V2                   
-udn_realtime200V1           
-udn_realtime200V2           
+mission200V2                52%
+nooho200V1                  57.50%
+nooho200V2                  60.5%
+qiqi200V1                   56.50%
+qiqi200V2                   56%
+udn_realtime200V1           95.5%
+udn_realtime200V2           97.5%
 
 mygopen                     62.85714%
 TFC                         75.2%
@@ -79,21 +79,21 @@ central200V1
 chinatimes200V1             
 chinatimes200V2             
 ettoday200V1                
-ettoday200V2               
+ettoday200V2
+udn_realtime200V1           
+udn_realtime200V2  
+liberty200V1                
+liberty200V2 
 globalmilitary200V1         
 globalmilitary200V2         
 kknews200V1                 
 kknews200V2                 
-liberty200V1                
-liberty200V2                
 mission200V1                
 mission200V2                
 nooho200V1                  
 nooho200V2                  
 qiqi200V1                   
 qiqi200V2                   
-udn_realtime200V1           
-udn_realtime200V2           
 
 mygopen                     
 TFC                         
