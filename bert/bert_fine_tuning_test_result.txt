@@ -64,7 +64,7 @@ udn_realtime200V1
 udn_realtime200V2           
 
 mygopen                     
-TFC                         
+TFC                         75.2%
 
 
 
