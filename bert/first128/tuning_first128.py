@@ -1,4 +1,4 @@
-#take 512 at a time, read first part of the text only
+#take 128 at a time, read first part of the text only
 ######################################
 #remember to change the model location
 ######################################
@@ -19,7 +19,7 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:511]
+  return token_ids[:127]
 
 def bert_encode(data_to_be_encoded):
   content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])

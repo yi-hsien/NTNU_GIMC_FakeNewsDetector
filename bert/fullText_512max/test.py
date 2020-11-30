@@ -59,7 +59,7 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 
 #load entire news data, and process input dict
-total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/apple_daily1001.csv')
+total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/TFC.csv')
 
 print(total_data)
 
