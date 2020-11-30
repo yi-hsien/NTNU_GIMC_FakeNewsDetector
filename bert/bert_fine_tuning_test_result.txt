@@ -41,8 +41,8 @@ TFC                         67.2%
 #using bert_5
 
 provider                    credibility_rate
-apple_realtime200V1         
-apple_realtime200V2         
+apple_realtime200V1         87%
+apple_realtime200V2         81%
 central200V1                
 chinatimes200V1             
 chinatimes200V2             
@@ -63,7 +63,7 @@ qiqi200V2
 udn_realtime200V1           
 udn_realtime200V2           
 
-mygopen                     
+mygopen                     62.85714%
 TFC                         75.2%
 
 
