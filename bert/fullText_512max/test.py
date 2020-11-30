@@ -1,7 +1,7 @@
 #this file is used to find how accurate a fine_tuned_bert model is to a specific news provider
 #remember to change this accordingly
-label_due_to_news_provider = 0
-range_due_to_dataset = 100
+label_due_to_news_provider = 1
+range_due_to_dataset = 250
 
 #other things to change
 '''
@@ -49,7 +49,7 @@ def one_time_bert_encode(string_to_be_encoded):
   return inputs
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_2'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_5'
 
 #import/set_up tokenizer and model
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
@@ -83,7 +83,7 @@ print("\n\n\n\n")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/apple_daily1001.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/TFC.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      for i in range(len(predictions)):
         wr.writerow(predictions[i])
