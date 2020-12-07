@@ -4,7 +4,7 @@ label_due_to_news_provider = 1
 range_due_to_dataset = 250
 
 all_csv_names = ['apple_realtime200V1','apple_realtime200V2','central200V1','chinatimes200V1','chinatimes200V2','ettoday200V1',
-         'ettoday200V2','udn_realtime200V1','udn_realtime200V2'.'liberty200V1','liberty200V2','globalmilitary200V1',
+         'ettoday200V2','udn_realtime200V1','udn_realtime200V2','liberty200V1','liberty200V2','globalmilitary200V1',
          'globalmilitary200V2','kknews200V1','kknews200V2','mission200V1','mission200V2','nooho200V1','nooho200V2','qiqi200V1',
          'qiqi200V2','mygopen','TFC']      
 all_csv_labels = [0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1]
