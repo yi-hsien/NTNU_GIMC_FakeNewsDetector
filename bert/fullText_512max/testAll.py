@@ -8,6 +8,7 @@ all_csv_names = ['apple_realtime200V1','apple_realtime200V2','central200V1','chi
          'qiqi200V2','mygopen','TFC']      
 all_csv_labels = [0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1]
 all_csv_size = [200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,140,250]
+result_credibilities = []
 #other things to change
 '''
 model_path
@@ -107,4 +108,9 @@ for names in range(len(all_csv_names)):
 
     print("total:{}".format(total_count))
     print("credibility rate is {}%".format(accurate_count/all_csv_size[names]*100))
-    break
+    result_credibilities.append(accurate_count/all_csv_size[names]*100)
+
+print("total result-------------")
+for names in range(len(all_csv_names)):
+    print(all_csv_names[names]+": "+result_credibilities[names])
+
