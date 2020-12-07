@@ -77,7 +77,7 @@ for samples in total_data['content']:
     predictions.append(string_prediction)
     
 #print("\n\n\n\npredictions:")
-#print(predictions)
+print(predictions[0])
 #print("\n\n\n\n")
 
 
@@ -96,7 +96,7 @@ for i in range(range_due_to_dataset):
     final_decision = 0
     for j in range(len(predictions[i])):
         if np.argmax(predictions[i][j]) == 1 :
-            print(predictions[i][j]) 
+            #print(predictions[i][j]) 
             final_decision = 1
     if final_decision == label_due_to_news_provider:
         accurate_count+=1
