@@ -1,7 +1,6 @@
 #this file is used to find how accurate a fine_tuned_bert model is to a specific news provider
 #remember to change this accordingly
-label_due_to_news_provider = 1
-range_due_to_dataset = 250
+
 
 all_csv_names = ['apple_realtime200V1','apple_realtime200V2','central200V1','chinatimes200V1','chinatimes200V2','ettoday200V1',
          'ettoday200V2','udn_realtime200V1','udn_realtime200V2','liberty200V1','liberty200V2','globalmilitary200V1',
@@ -110,5 +109,5 @@ for names in range(len(all_csv_names)):
         total_count+=1
 
     print("total:{}".format(total_count))
-    print("credibility rate is {}%".format(accurate_count/range_due_to_dataset*100))
+    print("credibility rate is {}%".format(accurate_count/all_csv_size[names]*100))
     break
