@@ -1,6 +1,6 @@
 #this file is used to find how accurate a fine_tuned_bert model is to a specific news provider
 #remember to change this accordingly
-label_due_to_news_provider = 1
+label_due_to_news_provider = 0
 range_due_to_dataset = 200
 
 #other things to change
@@ -59,7 +59,7 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 
 #load entire news data, and process input dict
-total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/globalmilitary200V1.csv')
+total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/apple_realtime200V1.csv')
 
 print(total_data)
 
@@ -77,14 +77,14 @@ for samples in total_data['content']:
     predictions.append(string_prediction)
     
 #print("\n\n\n\npredictions:")
-print(predictions[0][0])
-print(predictions[0][0][0])
+#print(predictions[0][0])
+#print(predictions[0][0][0])
 #print("\n\n\n\n")
 
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/globalmilitary200V1.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/apple_realtime200V1.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      for i in range(len(predictions)):
         wr.writerow(predictions[i])
@@ -96,8 +96,7 @@ total_count = 0
 for i in range(range_due_to_dataset):
     final_decision = 0
     for j in range(len(predictions[i][0])):
-        if np.argmax(predictions[i][0][j]) == 1 :
-            #print(predictions[i][j]) 
+        if np.argmax(predictions[i][0][j]) == 1 : 
             final_decision = 1
     if final_decision == label_due_to_news_provider:
         accurate_count+=1
