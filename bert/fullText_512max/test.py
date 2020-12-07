@@ -49,7 +49,7 @@ def one_time_bert_encode(string_to_be_encoded):
   return inputs
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_5'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_6'
 
 #import/set_up tokenizer and model
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
@@ -91,6 +91,7 @@ with open('/home/yi-hsien/ntnu/test_csv_results/udn_realtime200V2.csv', 'w', new
 
 #check credibility
 accurate_count = 0
+total_count = 0
 for i in range(range_due_to_dataset):
     final_decision = 0
     for j in range(len(predictions[i])):
@@ -98,5 +99,7 @@ for i in range(range_due_to_dataset):
             final_decision = 1
     if final_decision == label_due_to_news_provider:
         accurate_count+=1
+    total_count+=1
 
+print("total:{}".format(total_count))
 print("credibility rate is {}%".format(accurate_count/range_due_to_dataset*100))
