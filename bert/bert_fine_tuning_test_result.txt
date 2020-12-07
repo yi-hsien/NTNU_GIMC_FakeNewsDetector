@@ -94,8 +94,8 @@ nooho200V2                  94%
 qiqi200V1                   94.5%
 qiqi200V2                   97%
 
-mygopen                     
-TFC         
+mygopen                     65.71428%
+TFC                         72%
 
 
 
