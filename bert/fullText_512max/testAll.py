@@ -93,9 +93,6 @@ for names in range(len(all_csv_names)):
         for i in range(len(predictions)):
             wr.writerow(predictions[i])
 
-    print(predictions)
-    print(predictions[0])
-
     #check credibility
     accurate_count = 0
     total_count = 0
