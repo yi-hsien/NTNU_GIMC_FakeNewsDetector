@@ -55,7 +55,7 @@ def one_time_bert_encode(string_to_be_encoded):
   return inputs
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_6'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_5'
 
 #import/set_up tokenizer and model
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
@@ -112,5 +112,5 @@ for names in range(len(all_csv_names)):
 
 print("total result-------------")
 for names in range(len(all_csv_names)):
-    print(all_csv_names[names]+": "+result_credibilities[names])
+    print(all_csv_names[names]+": {:.2f}".format(result_credibilities[names]))
 
