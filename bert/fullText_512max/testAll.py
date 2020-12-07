@@ -94,6 +94,8 @@ for names in range(len(all_csv_names)):
         for i in range(len(predictions)):
             wr.writerow(predictions[i])
 
+    print(predictions)
+    print(predictions[0])
 
     #check credibility
     accurate_count = 0
@@ -109,3 +111,4 @@ for names in range(len(all_csv_names)):
 
     print("total:{}".format(total_count))
     print("credibility rate is {}%".format(accurate_count/range_due_to_dataset*100))
+    break
