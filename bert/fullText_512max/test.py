@@ -59,7 +59,7 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 
 #load entire news data, and process input dict
-total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/central200V1.csv')
+total_data = load_newsdata('/home/yi-hsien/ntnu/test_csv/chinatimes200V1.csv')
 
 print(total_data)
 
@@ -83,7 +83,7 @@ print("\n\n\n\n")
 
 import numpy as np
 import csv
-with open('/home/yi-hsien/ntnu/test_csv_results/central200V1.csv', 'w', newline='') as myfile:
+with open('/home/yi-hsien/ntnu/test_csv_results/chinatimes200V1.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      for i in range(len(predictions)):
         wr.writerow(predictions[i])
