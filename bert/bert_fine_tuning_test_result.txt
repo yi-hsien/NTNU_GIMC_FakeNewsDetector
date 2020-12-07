@@ -71,7 +71,31 @@ TFC                         75.2%
 #test-2020_12_06
 #using bert_6
 
+provider                    credibility_rate
+apple_realtime200V1         78%
+apple_realtime200V2         76%
+central200V1                56%
+chinatimes200V1             84.5%
+chinatimes200V2             89%
+ettoday200V1                54.5%
+ettoday200V2                64.5%
+udn_realtime200V1           85%
+udn_realtime200V2           84%
+liberty200V1                98%
+liberty200V2                98.5%
+globalmilitary200V1         96%
+globalmilitary200V2         100%
+kknews200V1                 95.5%
+kknews200V2                 93%
+mission200V1                96.5%
+mission200V2                88%
+nooho200V1                  98.5%
+nooho200V2                  94%
+qiqi200V1                   94.5%
+qiqi200V2                   97%
 
+mygopen                     
+TFC         
 
 
 
