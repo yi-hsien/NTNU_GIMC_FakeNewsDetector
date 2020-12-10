@@ -99,6 +99,43 @@ TFC                         72%
 
 
 
+#test-2020_12_10
+#using bert_4
+
+provider                    credibility_rate
+apple_realtime200V1:        71.00
+apple_realtime200V2:        68.00
+central200V1:               65.50
+chinatimes200V1:            79.50
+chinatimes200V2:            82.00
+ettoday200V1:               64.50
+ettoday200V2:               63.50
+udn_realtime200V1:          75.50
+udn_realtime200V2:          77.00
+liberty200V1:               98.00
+liberty200V2:               98.00
+globalmilitary200V1:        97.00
+globalmilitary200V2:        100.00
+kknews200V1:                94.50
+kknews200V2:                96.50
+mission200V1:               95.50
+mission200V2:               87.00
+nooho200V1:                 97.00
+nooho200V2:                 94.00
+qiqi200V1:                  98.00
+qiqi200V2:                  98.00
+
+mygopen:                    79.29
+TFC:                        80.80
+
+
+
+
+
+
+
+
+
 ##blank for copy
 provider                    credibility_rate
 apple_realtime200V1         
