@@ -67,7 +67,7 @@ checkpoint.restore(
 
 
 # Set up epochs and steps
-epochs = 1
+epochs = 10
 batch_size = 5
 eval_batch_size = 32
 
@@ -96,7 +96,7 @@ model.fit(glue_train,glue_train_labels,validation_data=(glue_validation,glue_val
           steps_per_epoch=steps_per_epoch)
 
 
-tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/bert_3')
+tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/bert_7')
 
 
 
