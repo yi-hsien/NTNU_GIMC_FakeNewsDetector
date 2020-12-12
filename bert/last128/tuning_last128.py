@@ -19,12 +19,7 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  if len(token_ids) <= 127:
-      return token_ids
-  else:
-      mid = int(len(token_ids)/2) #mid if odd, mid+1 if even
-      return token_ids[mid-63:mid+63]
-
+  return token_ids[-127:]
 
 def bert_encode(data_to_be_encoded):
   content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])
