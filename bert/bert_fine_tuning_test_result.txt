@@ -130,6 +130,61 @@ TFC:                        80.80
 
 
 
+#test-2020_12_12
+#using bert_7 test all
+
+provider                    credibility_rate
+apple_realtime200V1:        32.50
+apple_realtime200V2:        30.50
+central200V1:               28.50
+chinatimes200V1:            30.50
+chinatimes200V2:            28.50
+ettoday200V1:               21.50
+ettoday200V2:               20.50
+udn_realtime200V1:          32.00
+udn_realtime200V2:          23.00
+liberty200V1:               31.00
+liberty200V2:               3.00
+globalmilitary200V1:        99.50
+globalmilitary200V2:        100.00
+kknews200V1:                97.00
+kknews200V2:                98.50
+mission200V1:               98.50
+mission200V2:               97.00
+nooho200V1:                 97.00
+nooho200V2:                 94.50
+qiqi200V1:                  100.00
+qiqi200V2:                  100.00
+mygopen:                    83.57
+TFC:                        84.80
+                       
+
+#test-2020_12_12
+#using bert_8 test all
+
+apple_realtime200V1:        88.50
+apple_realtime200V2:        93.00
+central200V1:               93.00
+chinatimes200V1:            83.50
+chinatimes200V2:            89.00
+ettoday200V1:               85.50
+ettoday200V2:               84.00
+udn_realtime200V1:          89.50
+udn_realtime200V2:          89.00
+liberty200V1:               86.00
+liberty200V2:               88.00
+globalmilitary200V1:        94.00
+globalmilitary200V2:        99.50
+kknews200V1:                79.50
+kknews200V2:                86.50
+mission200V1:               64.50
+mission200V2:               77.50
+nooho200V1:                 48.00
+nooho200V2:                 44.50
+qiqi200V1:                  92.50
+qiqi200V2:                  96.00
+mygopen:                    45.71
+TFC:                        44.00
 
 
 
