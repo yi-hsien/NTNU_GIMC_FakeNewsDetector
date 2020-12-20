@@ -55,7 +55,7 @@ def one_time_bert_encode(string_to_be_encoded):
   return inputs
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_6'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_4'
 
 #import/set_up tokenizer and model
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
@@ -104,6 +104,9 @@ for names in range(len(all_csv_names)):
                 final_decision = 1
         if final_decision == all_csv_labels[names]:
             accurate_count+=1
+        elif all_csv_names[names] == "TFC":
+            print(total_data['content'][total_count])
+            print("\n")
         total_count+=1
 
     print("total:{}".format(total_count))
