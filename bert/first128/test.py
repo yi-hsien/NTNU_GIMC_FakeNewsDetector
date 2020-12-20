@@ -30,7 +30,7 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:127]
+  return token_ids[:511]
 
 
 def one_time_content_encode(content_string):
