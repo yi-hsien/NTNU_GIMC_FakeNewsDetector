@@ -47,7 +47,7 @@ def one_time_content_encode(content_string):
 
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_2'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_9'
 
 #import/set_up tokenizer and model
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
