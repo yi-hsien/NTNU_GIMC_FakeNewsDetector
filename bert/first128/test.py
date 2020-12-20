@@ -94,7 +94,7 @@ for names in range(len(all_csv_names)):
     accurate_count = 0
     total_count = 0
     for i in range(all_csv_size[names]):
-        if np.argmax(predictions[i][0]) == label_due_to_news_provider:
+        if np.argmax(predictions[i][0]) == all_csv_labels[names]:
             accurate_count+=1
         total_count += 1
 
