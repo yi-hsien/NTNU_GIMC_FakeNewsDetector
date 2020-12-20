@@ -11,6 +11,9 @@ result_credibilities = []
 #other things to change
 '''
 model_path
+data_name
+data_result_name
+tokenizer_path
 '''
 import tensorflow as tf
 import tensorflow_datasets
@@ -27,7 +30,11 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:127]
+  if len(token_ids) <= 127:
+      return token_ids
+  else:
+      mid = int(len(token_ids)/2) #mid if odd, mid+1 if even
+      return token_ids[mid-63:mid+63]
 
 
 def one_time_content_encode(content_string):
@@ -47,7 +54,7 @@ def one_time_content_encode(content_string):
 
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_2'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_8'
 
 #import/set_up tokenizer and model
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
