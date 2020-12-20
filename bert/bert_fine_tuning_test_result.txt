@@ -216,7 +216,7 @@ mygopen:                    31.43
 TFC:                        36.00
 
 
-#test-2020_12_20_1
+#test-2020_12_20_2
 #using bert_7 test last128
 
 apple_realtime200V1:        54.50
