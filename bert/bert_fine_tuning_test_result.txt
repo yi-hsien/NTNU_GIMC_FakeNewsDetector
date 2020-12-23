@@ -621,6 +621,35 @@ TFC: 55.60
 
 
 
+#test-2020_12_21 
+#using bert_18 test mid128
+
+apple_realtime200V1: 78.00
+apple_realtime200V2: 74.50
+central200V1: 90.00
+chinatimes200V1: 68.00
+chinatimes200V2: 72.00
+ettoday200V1: 81.50
+ettoday200V2: 67.50
+udn_realtime200V1: 74.50
+udn_realtime200V2: 77.50
+liberty200V1: 82.00
+liberty200V2: 80.00
+globalmilitary200V1: 89.00
+globalmilitary200V2: 97.50
+kknews200V1: 76.00
+kknews200V2: 82.00
+mission200V1: 68.00
+mission200V2: 71.00
+nooho200V1: 51.00
+nooho200V2: 51.50
+qiqi200V1: 91.00
+qiqi200V2: 92.50
+mygopen: 52.14
+TFC: 55.60
+
+
+
 
 
 
