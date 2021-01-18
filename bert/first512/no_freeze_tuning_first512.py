@@ -67,7 +67,7 @@ checkpoint.restore(
 
 
 # Set up epochs and steps
-epochs = 2
+epochs = 4
 batch_size = 5
 eval_batch_size = 32
 
