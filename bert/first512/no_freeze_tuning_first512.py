@@ -87,6 +87,7 @@ model.compile(
     loss=loss,
     metrics=metrics)
 
+model.bert.trainable = True
 
 #model.summary()
 
