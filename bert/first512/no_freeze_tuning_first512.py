@@ -77,7 +77,7 @@ num_train_steps = steps_per_epoch * epochs
 warmup_steps = int(epochs * train_data_size * 0.1 / batch_size)
 
 # creates an optimizer with learning rate schedule
-optimizer = tf.keras.optimizers.Adam(learning_rate=2e-5)
+optimizer = tf.keras.optimizers.Adam(learning_rate=5e-5)
 
 metrics = [tf.keras.metrics.SparseCategoricalAccuracy('accuracy', dtype=tf.float32)]
 loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
