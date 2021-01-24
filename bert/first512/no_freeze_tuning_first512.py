@@ -26,10 +26,10 @@ def bert_encode(data_to_be_encoded):
   cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]*content_list.shape[0]
   content_list_ids = tf.concat([cls, content_list], axis=-1)
 
-  input_mask = tf.ones_like(content_list_ids).to_tensor()
-  input_type_ids = tf.zeros_like(content_list_ids).to_tensor()
+  input_mask = tf.ones_like(content_list_ids).to_tensor(shape=(None,512))
+  input_type_ids = tf.zeros_like(content_list_ids).to_tensor(shape=(None,512))
   inputs = {
-    'input_ids': content_list_ids.to_tensor(),
+    'input_ids': content_list_ids.to_tensor(shape=(None,512)),
     'input_mask': input_mask,
     'input_type_ids': input_type_ids
   }
@@ -48,7 +48,7 @@ glue_train_labels = tf.convert_to_tensor(train_data['labeled'])
 
 
 glue_validation = bert_encode(validation_data)
-glue_validation_labels = validation_data['labeled']
+glue_validation_labels = tf.convert_to_tensor(validation_data['labeled'])
 
 for key, value in glue_train.items():
   print(f'{key:15s} shape: {value.shape}')
