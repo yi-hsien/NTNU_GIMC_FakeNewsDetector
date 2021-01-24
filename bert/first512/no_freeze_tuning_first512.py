@@ -67,7 +67,7 @@ checkpoint.restore(
 
 
 # Set up epochs and steps
-epochs = 4
+epochs = 2
 batch_size = 5
 eval_batch_size = 32
 
@@ -77,7 +77,7 @@ num_train_steps = steps_per_epoch * epochs
 warmup_steps = int(epochs * train_data_size * 0.1 / batch_size)
 
 # creates an optimizer with learning rate schedule
-optimizer = tf.keras.optimizers.Adam(learning_rate=2e-5)
+optimizer = tf.keras.optimizers.Adam(learning_rate=5e-5)
 
 metrics = [tf.keras.metrics.SparseCategoricalAccuracy('accuracy', dtype=tf.float32)]
 loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
@@ -95,7 +95,7 @@ model.fit(glue_train,glue_train_labels,validation_data=(glue_validation,glue_val
 
 
 #tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/bert_23')
-tf.saved_model.save(model,'/home/csliao/tf01/yi-hsien/bert_23')
+tf.saved_model.save(model,'/home/csliao/tf01/yi-hsien/bert_24')
 
 
 
