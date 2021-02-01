@@ -6,6 +6,7 @@ import tensorflow as tf
 import tensorflow_datasets
 from transformers import *
 import pandas as pd
+import numpy as np
 
 tokenizer = BertTokenizer.from_pretrained("/home/yi-hsien/ntnu/bert_model_chinese_wwm_ext/publish")
 
@@ -44,11 +45,11 @@ train_data = total_data.sample(frac = 0.9)
 validation_data = total_data.drop(train_data.index)
 
 glue_train = bert_encode(train_data)
-glue_train_labels = tf.convert_to_tensor(train_data['labeled'])
+glue_train_labels = np.array(train_data['labeled'])
 
 
 glue_validation = bert_encode(validation_data)
-glue_validation_labels = tf.convert_to_tensor(validation_data['labeled'])
+glue_validation_labels = np.array(validation_data['labeled'])
 
 for key, value in glue_train.items():
   print(f'{key:15s} shape: {value.shape}')
