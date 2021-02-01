@@ -95,7 +95,7 @@ model.fit(glue_train,glue_train_labels,validation_data=(glue_validation,glue_val
           steps_per_epoch=steps_per_epoch)
 
 
-tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/bert_24')
+tf.saved_model.save(model,'/home/csliao/tf01/yi-hsien/bert_25')
 
 
 
@@ -112,7 +112,7 @@ plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.legend(['train_acc', 'test_val_acc'], loc='best')
-plt.savefig('/home/yi-hsien/ntnu/fine_tune_acc.png')
+plt.savefig('/home/csliao/tf01/yi-hsien/fine_tune_acc.png')
 plt.show()
 plt.cla()
 # summarize history for loss 
@@ -122,7 +122,7 @@ plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train_loss', 'test_val_loss'], loc='best') 
-plt.savefig('/home/yi-hsien/ntnu/fine_tune_loss.png')
+plt.savefig('/home/csliao/tf01/yi-hsien/fine_tune_loss.png')
 plt.show()
 plt.close()
 
