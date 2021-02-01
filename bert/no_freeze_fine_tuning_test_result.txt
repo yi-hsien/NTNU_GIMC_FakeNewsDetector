@@ -1,0 +1,25 @@
+
+--bert_25
+apple_realtime200V1: 86.50
+apple_realtime200V2: 76.00
+central200V1: 84.50
+chinatimes200V1: 79.50
+chinatimes200V2: 83.50
+ettoday200V1: 90.50
+ettoday200V2: 88.00
+udn_realtime200V1: 89.00
+udn_realtime200V2: 89.50
+liberty200V1: 99.50
+liberty200V2: 99.50
+globalmilitary200V1: 90.50
+globalmilitary200V2: 97.50
+kknews200V1: 84.00
+kknews200V2: 83.50
+mission200V1: 77.00
+mission200V2: 78.50
+nooho200V1: 89.00
+nooho200V2: 84.50
+qiqi200V1: 95.00
+qiqi200V2: 91.50
+mygopen: 74.29
+TFC: 73.20
