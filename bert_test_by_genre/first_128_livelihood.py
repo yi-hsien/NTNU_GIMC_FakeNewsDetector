@@ -95,7 +95,7 @@ model.fit(glue_train,glue_train_labels,validation_data=(glue_validation,glue_val
           steps_per_epoch=steps_per_epoch)
 
 
-tf.saved_model.save(model,'/home/csliao/tf01/yi-hsien/livelihood_1')
+tf.saved_model.save(model,'/home/yi-hsien/ntnu/fine_tuned_bert/livelihood_1')
 
 
 
