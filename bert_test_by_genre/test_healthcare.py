@@ -62,7 +62,7 @@ import csv
 
 for names in range(len(all_csv_names)):
     print("processing: {}".format(all_csv_names[names]))
-    CSV_PATH = '/home/yi-hsien/ntnu/test_csv/'+all_csv_names[names]+'.csv'
+    CSV_PATH = '/home/yi-hsien/ntnu/test_csv/healthcare/testingset/'+all_csv_names[names]+'.csv'
     RESULT_PATH = '/home/yi-hsien/ntnu/test_csv_results/'+all_csv_names[names]+'.csv'
     
     #load entire news data, and process input dict
