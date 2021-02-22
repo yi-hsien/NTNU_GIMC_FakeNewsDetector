@@ -5,3 +5,32 @@ no layer freezing involved
 
 --------------------
 healthcare_1 
+total result-------------
+applerealtime1250V10201: 77.12
+cna2500V10201: 90.24
+globalmilitary600V10201: 98.50
+liberty1250V10201: 98.88
+nooho150V10201: 79.33
+udndaily1250V10201: 77.12
+chinatimes1250V10201: 69.68
+ettoday2500V10201: 72.52
+kknews1600V10201: 95.75
+mission1000V10201: 100.00
+qiqi1000V10201: 93.30
+
+livelihood_1
+total result-------------
+applerealtime1250V1: 96.32
+cna2500V1: 99.20
+globalmilitary1000V1: 98.80
+liberty1250V1: 99.52
+nooho400V1: 39.75
+udndaily1250V1: 93.68
+chinatimes1250V1: 90.88
+ettoday2500V1: 90.84
+kknews1600V1: 82.50
+mission1000V1: 99.90
+qiqi1000V1: 97.90
+
+
+
