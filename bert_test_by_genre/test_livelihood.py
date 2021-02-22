@@ -4,7 +4,7 @@
 all_csv_names = ['applerealtime1250V1','cna2500V1','globalmilitary1000V1',
         'liberty1250V1','nooho400V1','udndaily1250V1','chinatimes1250V1',
         'ettoday2500V1','kknews1600V1','mission1000V1','qiqi1000V1']
-all_csv_labels = [0,0,1,0,1,0,0,1,1,1]
+all_csv_labels = [0,0,1,0,1,0,0,0,1,1,1]
 all_csv_size = [1250,2500,1000,1250,400,1250,1250,2500,1600,1000,1000]
 result_credibilities = []
 #other things to change
