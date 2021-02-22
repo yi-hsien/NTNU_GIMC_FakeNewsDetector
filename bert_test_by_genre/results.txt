@@ -1,0 +1,7 @@
+test_result for fine tuning datasets of different genre. 
+no layer freezing involved
+
+
+
+--------------------
+healthcare_1 
