@@ -44,7 +44,7 @@ for i in range(4):
 #using chinese_bert_wwm https://github.com/ymcui/Chinese-BERT-wwm
 
 ##declare path
-bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_2'
+bert_model_path = '/home/yi-hsien/ntnu/fine_tuned_bert/bert_22'
 ##
 
 import tensorflow as tf
@@ -63,7 +63,7 @@ def encode_words(s):
   tokens = tokenizer.tokenize(s)
   tokens.append('[SEP]')
   token_ids = tokenizer.convert_tokens_to_ids(tokens)
-  return token_ids[:511]
+  return token_ids[:127]
 
 def bert_encode(data_to_be_encoded):
   content_list = tf.ragged.constant([encode_words(contents) for contents in data_to_be_encoded['content'].values])
@@ -84,10 +84,10 @@ def one_time_content_encode(content_string):
   cls = [tokenizer.convert_tokens_to_ids(['[CLS]'])]*content_list.shape[0]
   content_list_ids = tf.concat([cls, content_list], axis=-1)
 
-  input_mask = tf.ones_like(content_list_ids).to_tensor(shape=(None,512))
-  input_type_ids = tf.zeros_like(content_list_ids).to_tensor(shape=(None,512))
+  input_mask = tf.ones_like(content_list_ids).to_tensor(shape=(None,128))
+  input_type_ids = tf.zeros_like(content_list_ids).to_tensor(shape=(None,128))
   inputs = {
-    'input_ids': content_list_ids.to_tensor(shape=(None,512)),
+    'input_ids': content_list_ids.to_tensor(shape=(None,128)),
     'input_mask': input_mask,
     'input_type_ids': input_type_ids
   }
