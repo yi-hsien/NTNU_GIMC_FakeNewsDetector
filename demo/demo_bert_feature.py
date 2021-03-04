@@ -100,9 +100,7 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 #process data
 processed_input = one_time_content_encode(content)
-print ("content:")
-print (content)
-print (processed_input)
+
 
 #for key, value in processed_input.items():
 #  print(f'{key:15s} shape: {value.shape}')
@@ -110,7 +108,7 @@ print (processed_input)
 
 #make prediction
 predictions = probability_model.predict(loaded_model(processed_input)[0])
-print(predictions)
+
 import numpy as np
 print("real news_percentage={:.3f}%, fake news_percentage={:.3f}%<br>".format(predictions[0][0]*100,predictions[0][1]*100))
 result = np.argmax(predictions)
