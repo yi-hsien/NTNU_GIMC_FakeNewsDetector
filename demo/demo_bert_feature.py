@@ -108,7 +108,7 @@ processed_input = one_time_content_encode(content)
 
 #make prediction
 predictions = probability_model.predict(loaded_model(processed_input)[0])
-
+print(predictions)
 import numpy as np
 print("real news_percentage={:.3f}%, fake news_percentage={:.3f}%<br>".format(predictions[0][0]*100,predictions[0][1]*100))
 result = np.argmax(predictions)
