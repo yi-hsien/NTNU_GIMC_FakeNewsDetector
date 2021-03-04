@@ -100,6 +100,8 @@ probability_model = tf.keras.Sequential([tf.keras.layers.Softmax()])
 
 #process data
 processed_input = one_time_content_encode(content)
+print ("content:")
+print (content)
 print (processed_input)
 
 #for key, value in processed_input.items():
